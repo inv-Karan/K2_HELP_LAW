@@ -6,9 +6,7 @@ import SelectLanguagePage from '../pages/select-language';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Logo />
       <SelectLanguagePage />
-      <Footer />
       {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />

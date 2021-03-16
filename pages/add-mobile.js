@@ -1,13 +1,13 @@
 import React from 'react';
 import AddMobile from '../container/addMobile';
 import styles from '../styles/Home.module.css';
-import {Logo, Footer} from '../component/index';
+import { PublicLayout } from '../component/index';
 
 const AddMobilePage = () => {
     return <div className={styles.container}>
-    <Logo />
-    <AddMobile />
-    <Footer />
+    <PublicLayout>
+        <AddMobile />
+    </PublicLayout>
     </div>
 };
 

@@ -1,0 +1,57 @@
+// Responsive Breakpoint start Here.......
+$screen-xl-min: 1920px;
+$screen-lg-min: 1280px;
+$screen-md-min: 960px;
+$screen-sm-min: 600px;
+$screen-sm-max: 599.98px;
+$screen-md-max: 959.98px;
+$screen-lg-max: 1279.98px;
+$screen-xl-max: 1919.98px;
+
+@mixin bellow-xl {
+  @media all and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+@mixin bellow-lg {
+  @media all and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin bellow-md {
+  @media all and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin bellow-sm {
+  @media all and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin above-xl {
+  @media all and (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin above-lg {
+  @media all and (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin above-md {
+  @media all and (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin above-sm {
+  @media all and (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}

@@ -1,0 +1,153 @@
+@import "variable";
+@import "mixing";
+@import "responsive";
+
+header{
+  top: 0;
+  height: 80px;
+  display: flex;
+  z-index: 10;
+  position: sticky;
+  align-items: center;
+  background-color: white;
+  @include box-shadow(inset 0 -1px 0 0 darken($gray-light-color, 5%));
+  .logo{
+    display: flex;
+    align-items: center;
+    padding: 0px $size20;
+    border-right: 0px solid darken($gray-light-color, 5%);
+    height: 70px;
+    img{
+      width: auto;
+    }
+  }
+  .rightCol{
+    display: flex;
+    align-items: center;
+    padding: 0 $size20;
+    height: 70px;
+    justify-content: flex-end;
+    width: 100%;
+    .formGroup{
+      height: 38px;
+      position: relative;
+      border: 0;
+      background: transparent;
+      .inputBoxIcon{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 1;
+      }
+      input[type='text']{
+        width: 100%;
+        border: 0;
+        height: 36px;
+        font-size: $size14;
+        color: $gray-color;
+        padding: 10px 15px 10px 40px;
+        font-family: Roboto;
+        background-color: transparent;
+        &:focus{
+          color: $primary-color;
+        }
+      }
+    }
+    .profileDropDown{
+      .profileInn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .profileBlk{
+          display: flex;
+          margin-left: 20px;
+          .profileImg{
+            width: 32px;
+            height: 32px;
+            @include border-radius(100%);
+          }
+          .profileBlkInn{
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            .name{
+              font-size: $size14;
+              font-weight: 600;
+              line-height: 1;
+              letter-spacing: 0.1px;
+              color: $cosmic-cobalt-color;
+              margin-bottom: 5px;
+            }
+            .discription{
+              font-size: $size14;
+              font-weight: 400;
+              line-height: 1;
+              letter-spacing: 0.1px;
+              color: $gray-color;
+            }
+          }
+        }
+      }
+    }
+    button{
+      background: transparent;
+      border: 0;
+      width: $size24;
+      height: $size24;
+      margin-left: 20px;
+      outline: none;
+      cursor: pointer;
+      &.mobNav{
+        background: url(../public/images/menu.svg);
+        background-size: cover;
+        @include above-md{
+          display: none;
+        }
+        &:focus{
+          outline: none;
+        }
+      }
+      &.mobNavClose{
+        background: url(../public/images/close.svg);
+      }
+    }
+  }
+}
+
+.dropbtn {
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+	&:hover {
+		.dropdown-content {
+			display: block;
+		}
+	}
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	span {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+}
+
