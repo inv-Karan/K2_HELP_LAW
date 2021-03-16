@@ -9,6 +9,7 @@ import { TextBox, Button } from '../component/index';
 const addVerificationSchema = Yup.object({
   otp: Yup.string()
     .required("OTP is required")
+    .min(4, "4 digit varification code is required!")
 })
 
 function addVerification() {

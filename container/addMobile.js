@@ -9,6 +9,7 @@ import { TextBox, Button } from '../component/index';
 const addMobileSchema = Yup.object({
   mobile: Yup.string()
     .required("Mobile is required")
+    .min(10, "10 digit mobile number is required!")
 })
 
 function addMobile() {
