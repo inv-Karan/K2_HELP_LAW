@@ -10,7 +10,7 @@ const Footer = () => {
 					className={styles.card}
 				>
 					<h3>Contact us</h3>
-					<p>support@k2helplaw.com</p>
+					<p style={{color:'white'}}>support@k2helplaw.com</p>
 				</a>
 			</div>
 			<p>Powered by Oasis Infotech</p>
