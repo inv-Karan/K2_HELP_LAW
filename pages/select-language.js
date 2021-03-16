@@ -3,11 +3,9 @@ import SelectLanguage from '../container/selectLanguage';
 import { PublicLayout } from '../component/index';
 
 const SelectLanguagePage = () => {
-    return <>
-    <PublicLayout>
+  return <PublicLayout>
     <SelectLanguage />
-    </PublicLayout>
-    </>
+  </PublicLayout>
 };
 
 export default SelectLanguagePage;

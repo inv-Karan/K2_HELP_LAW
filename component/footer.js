@@ -13,7 +13,7 @@ const Footer = () => {
 					<p style={{color:'white'}}>support@k2helplaw.com</p>
 				</a>
 			</div>
-			<p>Powered by Oasis Infotech</p>
+			<p>Powered by Logical Loop</p>
 		</div>
 	</>
 };
