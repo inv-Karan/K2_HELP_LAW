@@ -2,52 +2,52 @@ const actList = [
     {
         act: 'I.P.C act',
         img: '',
-        pageLink: '/'
+        pageLink: '/ipc-act'
     },
     {
         act: 'C.R.P.C act',
         img: '',
-        pageLink: '/'
+        pageLink: '/crpc-act'
     },
     {
         act: 'Evidence act',
         img: '',
-        pageLink: '/'
+        pageLink: '/evidence-act'
     },
     {
         act: 'M.V. act',
         img: '',
-        pageLink: '/'
+        pageLink: '/mv-act'
     },
     {
         act: 'G.P. act',
         img: '',
-        pageLink: '/'
+        pageLink: '/gp-act'
     },
     {
-        act: 'Progibition act',
+        act: 'Prohibition act',
         img: '',
-        pageLink: '/'
+        pageLink: '/prohibition-act'
     },
     {
         act: 'Gambling act',
         img: '',
-        pageLink: '/'
+        pageLink: '/gambling-act'
     },
     {
         act: 'P.O.C.S.O.',
         img: '',
-        pageLink: '/'
+        pageLink: '/pocso'
     },
     {
         act: 'S.C.S.T. act',
         img: '',
-        pageLink: '/'
+        pageLink: '/scst-act'
     },
     {
         act: 'GAP act',
         img: '',
-        pageLink: '/'
+        pageLink: '/gap-act'
     },
 ];
 

@@ -58,22 +58,22 @@ function updateProfile() {
           onBlur={handleBlur}
         />
         <Select
-          label={'Mobile Number'}
+          label={'Place'}
           isRequired={true}
-          value={values.mobile}
+          value={values.place}
           handleChange={handleChange}
-          name="mobile"
-          placeholder='Mobile Number'
+          name="place"
+          placeholder='Place'
           onBlur={handleBlur}
           list={['Gujarat[GJ]']}
         />
         <Select
-          label={'Mobile Number'}
+          label={'Account Type'}
           isRequired={true}
-          value={values.mobile}
+          value={values.account_type}
           handleChange={handleChange}
-          name="mobile"
-          placeholder='Mobile Number'
+          name="account_type"
+          placeholder='Account Type'
           onBlur={handleBlur}
           list={['Advocate', 'Police', 'Public', 'Student']}
         />
