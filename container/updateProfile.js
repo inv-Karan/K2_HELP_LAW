@@ -75,7 +75,7 @@ function updateProfile() {
           name="account_type"
           placeholder='Account Type'
           onBlur={handleBlur}
-          list={['Advocate', 'Police', 'Public', 'Student']}
+          list={['CA', 'Advocate', 'Police', 'Public']}
         />
         <Button text='Update' type='Submit' onClick={handleSubmit} />
       </div>
