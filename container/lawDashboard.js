@@ -1,25 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { withStyles } from '@material-ui/core'
 import Color from '../styles/colors'
 import { PrimaryLayout, PageFrame } from '../component/index'
-import { useSelector } from "react-redux"
 import { useRouter } from 'next/router'
-import DashboardHeader from '../component/dashboard/dashboardHeader'
-import DashboardCards from '../component/dashboard/dashboardCards'
-import DashboardFarmPopUp from '../component/dashboard/dashboardFarmPopup'
+import LAWDASHBOARDHEADER from '../component/law-dashboard/lawDashboardHeader'
+import LAWDASHBOARDCARDS from '../component/law-dashboard/lawDashboardCards'
 
 
-const mainDashBoard = () => {
-  const [showFarmPopup, toggleFarmPopup] = useState(false)
-  const { designation_id } = useSelector((state) => state.user.userData || {})
+const lawDashboard = () => {
   const router = useRouter()
 
   return (
     <PrimaryLayout>
       <PageFrame>
-        <DashboardHeader toggleFarmPopup = {() => toggleFarmPopup(!showFarmPopup)}/>
-        <DashboardCards designationId = {designation_id} router={router}/>
-        <DashboardFarmPopUp showFarmPopup = {showFarmPopup} toggleFarmPopup = {() => toggleFarmPopup(!showFarmPopup)}/>
+        <LAWDASHBOARDHEADER />
+        <LAWDASHBOARDCARDS />
       </PageFrame>
     </PrimaryLayout>
   )
@@ -81,9 +76,9 @@ const STYLES = {
   clickableCard: {
     cursor: 'pointer',
     "&:hover": {
-      background: "rgba(46,139,87,1)"
+      background: "rgba(0, 112, 243, 1)"
     },
   }
 }
 
-export default withStyles(STYLES)(mainDashBoard)
+export default withStyles(STYLES)(lawDashboard)

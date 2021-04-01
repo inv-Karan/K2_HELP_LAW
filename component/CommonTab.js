@@ -10,8 +10,8 @@ const CommonTabs = (props) => {
                 {
                     tabs.map((item) => {
                     return (
-                            <span onClick={() => changeSelectedTab(item.value)} style={{cursor: "pointer",padding: 5,backgroundColor: selectedTab === item.value ? "#2e8b57" : "white",marginRight: 10,display: "inline-block",borderRadius: 20,border: "1px solid #2e8b57",paddingLeft: 20,paddingRight: 20}}>
-                                <span style={{color: selectedTab === item.value ? "white" : "#2e8b57" }}>{item.label}</span>
+                            <span onClick={() => changeSelectedTab(item.value)} style={{cursor: "pointer",padding: 5,backgroundColor: selectedTab === item.value ? "#0070f3" : "white",marginRight: 10,display: "inline-block",borderRadius: 20,border: "1px solid #0070f3",paddingLeft: 20,paddingRight: 20}}>
+                                <span style={{color: selectedTab === item.value ? "white" : "#0070f3" }}>{item.label}</span>
                             </span>
                         )
                     })

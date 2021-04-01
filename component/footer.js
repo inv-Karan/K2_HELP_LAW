@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core'
 import Color from '../styles/colors'
 import { useRouter } from 'next/router'
 import { useSelector } from "react-redux";
-import urlMapper from '../utiliy/api/urlMapper'
+// import urlMapper from '../utiliy/api/urlMapper'
 import { HyperLink, Button, } from '../component/index'
 
 
@@ -18,10 +18,8 @@ const ProfileComponent = (props) => <div className={'profileBlk'}>
 const Footer = (props) => {
   let { menuIconClick, sidemunuIsOpen, classes } = props
   const router = useRouter()
-  const { name, email, profile } = useSelector((state) => state.user.userData || {});
 
   return <div className={'footerContainer'} onClick={() => router.push('dashboard')}>
-    <HyperLink href={'http://myfarmeasy.com/privacy.html'} text={'Privacy policy and Term of use'}/>
   </div>
 }
 const STYLES = {

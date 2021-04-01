@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { withStyles } from '@material-ui/core'
-import urlMapper from '../utiliy/api/urlMapper';
+// import urlMapper from '../utiliy/api/urlMapper'
 import { Button } from '../component/index'
 import { useRouter } from 'next/router'
-import { deleteBlog } from '../redux/action/blogAction'
-import { useDispatch } from 'react-redux'
+// import { deleteBlog } from '../redux/action/blogAction'
+// import { useDispatch } from 'react-redux'
 
 const BlogBody = (props) => {
     const router = useRouter()
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
   let [readMore, setReadMore]=useState(false)
   let { title, id, image, description } = props.blog
   return <>
@@ -23,8 +23,8 @@ const BlogBody = (props) => {
                 })
             }} />
             <Button text='Delete' onClick={() => {
-                dispatch(deleteBlog(id))
-                router.push('/exclusive')
+                // dispatch(deleteBlog(id))
+                router.push('/')
             }}/>
             </div>
         </div>

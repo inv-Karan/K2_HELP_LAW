@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core'
 import Color from '../styles/colors'
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from "react-redux"
-import urlMapper from '../utiliy/api/urlMapper';
-import { deleteUser, resetPassword } from "../redux/action/userAction"
+// import urlMapper from '../utiliy/api/urlMapper';
+// import { deleteUser, resetPassword } from "../redux/action/userAction"
 
 const ProfileComponent = (props) => <div className={'profileBlk'}>
   <img src={props.profile ? `${urlMapper.PROFILE_IMAGES}${props.profile}` : `/images/staff.png`} alt="" className={'profileImg'} />

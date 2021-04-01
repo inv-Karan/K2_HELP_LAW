@@ -12,16 +12,16 @@
     font-weight: 600;
     line-height: 40px;
     text-align: center;
-    color: white;
+    color: #0070b3;
     padding: 0 20px;
     border: 0;
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
-    background: $primary-color;
+    background: $gray-light-color;
     outline: none;
     &:hover, &:focus{
-      background: lighten($primary-color, 8%);
+      background: lighten($blue-light-color, 8%);
       outline: none;
     }
   }
