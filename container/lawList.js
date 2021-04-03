@@ -5,24 +5,27 @@ import { PageFrame, CommonTabs } from '../component/index'
 import { CardComponent } from '../component/index'
 import { laws } from "../utility/constants"
 // import Blog from './blog'
+import { useRouter } from 'next/router'
+import { Router } from 'next/router'
 
 const LawList = () => {
   const [selectedTab, changeSelectedTab] = useState('ca')
+  const router = useRouter()
 
   return <>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>LAWS</h1>
       </Grid>
-      {/* <Grid container>
+      <Grid container>
         <div style={{ position: 'relative', display: 'inline-block' }}>
-          <SearchIcon style {...{position: 'absolute', left: 0, top: 15, width: 20, height: 20}} />
+          {/* <SearchIcon style {{position: 'absolute', left: 0, top: 15, width: 20, height: 20}} /> */}
           <TextField
             style={{ textIndent: 30 }}
             placeholder={'Search'}
           />
         </div>
-      </Grid> */}
+      </Grid>
       <div className={'LawListPage'}>
         <div className={'tab'}>
           <CommonTabs

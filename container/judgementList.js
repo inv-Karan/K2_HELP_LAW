@@ -1,27 +1,38 @@
 import React, { useState } from 'react'
-import { withStyles, Grid } from '@material-ui/core'
+import { withStyles, Grid, TextField } from '@material-ui/core'
+import { SearchIcon } from '@material-ui/icons/Search'
 import { PageFrame, CommonTabs } from '../component/index'
 import { CardComponent } from '../component/index'
 import { judgements } from "../utility/constants"
 // import Blog from './blog'
 
 const JudgementList = () => {
-  const [selectedTab, changeSelectedTab] = useState('ca')
+  const [selectedTab, changeSelectedTab] = useState('sections')
 
   return <>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>JUDGEMENTS</h1>
       </Grid>
-      <div className={'LawListPage'}>
+      <Grid container>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          {/* <SearchIcon style {{position: 'absolute', left: 0, top: 15, width: 20, height: 20}} /> */}
+          <TextField
+            style={{ textIndent: 30 }}
+            placeholder={'Search'}
+          />
+        </div>
+      </Grid>
+      <div className={'JudgementListPage'}>
         <div className={'tab'}>
           <CommonTabs
             tabs={
               [
-                { label: 'CA', value: 'ca' },
-                { label: 'Advocate', value: 'advocate' },
-                { label: 'Police', value: 'police' },
-                { label: 'Public', value: 'public' },
+                { label: 'Sections', value: 'sections' },
+                { label: 'Chapter', value: 'chapter' },
+                { label: 'Judgements', value: 'judgements' },
+                { label: 'Rules', value: 'rules' },
+                { label: 'Details', value: 'details' }
                 // { label: 'Blogs', value: 'blog', component: <Blog /> }
               ]
             }

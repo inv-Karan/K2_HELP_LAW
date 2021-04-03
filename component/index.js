@@ -30,5 +30,6 @@ import BlogBody from './blogBody'
 import CardComponent from './cardComponent'
 // import MP from './monthPicker'
 // import YP from './yearPicker'
+import Collapsable from './collapsable'
 
-export {PublicLayout, BlogBody, CardComponent, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button }
+export {PublicLayout, BlogBody, CardComponent, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable }

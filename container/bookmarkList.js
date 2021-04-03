@@ -1,20 +1,30 @@
 import React, { useState } from 'react'
-import { withStyles, Grid } from '@material-ui/core'
+import { withStyles, Grid, TextField } from '@material-ui/core'
 import { PageFrame, CommonTabs } from '../component/index'
+import { SearchIcon } from '@material-ui/icons/Search'
 import { CardComponent } from '../component/index'
 import { bookmarks } from "../utility/constants"
 // import Blog from './blog'
 
 const BookmarkList = () => {
-  const [selectedTab, changeSelectedTab] = useState('ca')
+  // const [selectedTab, changeSelectedTab] = useState('ca')
 
   return <>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
-        <h1>BOOKMARKS</h1>
+        <h1>YOUR BOOKMARK</h1>
+      </Grid>
+      <Grid container>
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+          {/* <SearchIcon style {{position: 'absolute', left: 0, top: 15, width: 20, height: 20}} /> */}
+          <TextField
+            style={{ textIndent: 30 }}
+            placeholder={'Search'}
+          />
+        </div>
       </Grid>
       <div className={'LawListPage'}>
-        <div className={'tab'}>
+        {/* <div className={'tab'}>
           <CommonTabs
             tabs={
               [
@@ -28,7 +38,7 @@ const BookmarkList = () => {
             changeSelectedTab={changeSelectedTab}
             selectedTab={selectedTab}
           />
-        </div>
+        </div> */}
       </div>
       <Grid container>
           {bookmarks.map(({ label, sub, pageLink, bookmark }) => <CardComponent
