@@ -21,7 +21,7 @@ const STYLES = {
     width: "100%",
     height: '139px',
     borderRadius: '20px',
-    backgroundColor: '#0070f3',
+    backgroundColor: '#ffffff',
     margin: 10,
     padding: 10
   },
@@ -30,7 +30,7 @@ const STYLES = {
     fontFamily: 'Poppins',
     fontWeight: 800,
     fontSize: '16px',
-    color: '#ffffff',
+    color: '#227df2',
     "&:hover": {
       color: "rgba(0, 0, 0, 1)"
     },

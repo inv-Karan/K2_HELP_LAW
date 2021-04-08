@@ -15,7 +15,7 @@ const DashboardCards = () => {
     <Grid>
       <Grid item>
         <Grid>
-          <Grid item className={'createSelect formSquare'}>
+          <Grid item className={'formSquare'}>
             <h1>LAWS</h1>
             
               <Button text={`View All`} onClick={() => {
@@ -46,7 +46,7 @@ const DashboardCards = () => {
     <Grid>
       <Grid item>
         <Grid>
-          <Grid item className={'createSelect formSquare'}>
+          <Grid item className={'formSquare'}>
             <h1>JUDGEMENTS</h1>
 
             <Button text={`View All`} onClick={() => {
@@ -77,7 +77,7 @@ const DashboardCards = () => {
     <Grid>
       <Grid item>
         <Grid>
-          <Grid item className={'createSelect formSquare'}>
+          <Grid item className={'formSquare'}>
             <h1>BOOKMARKS</h1>
 
             <Button text={`View All`} onClick={() => {

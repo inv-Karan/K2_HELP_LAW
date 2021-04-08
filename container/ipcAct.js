@@ -34,8 +34,8 @@ const IPCAct = () => {
       </div>
       <Grid>
         <CardComponent 
-          label={`22`}
-          sub={`2015`}
+          label={`22 lorem ipsum`}
+          sub={`2015 lorem ipsum`}
         />
         <Collapsable />
       </Grid>

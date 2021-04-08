@@ -12,13 +12,13 @@
     font-weight: 600;
     line-height: 40px;
     text-align: center;
-    color: #0070b3;
+    color: #2f80ed;
     padding: 0 20px;
     border: 0;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    background: $gray-light-color;
+    background: #e2efff;
     outline: none;
     &:hover, &:focus{
       background: lighten($blue-light-color, 8%);

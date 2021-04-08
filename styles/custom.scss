@@ -83,7 +83,7 @@ ul{
   }
 }
 .mainContainer{
-  background-color: transparent;
+  background-color: #e5e5e5;
   padding:40px 40px $size20 290px;
   width: 100%;
   @include bellow-md {
@@ -1324,7 +1324,17 @@ table{
       font-style: normal;
       line-height: $size30;
       letter-spacing: 0.1px;
-      color: $cosmic-cobalt-color;
+      color: #252525;
+      margin: 0;
+    }
+    h3{
+      font-family: Poppins;
+      font-size: $size18;
+      font-weight: 600;
+      font-style: normal;
+      line-height: $size30;
+      letter-spacing: 0.1px;
+      color: #6D6D6D;
       margin: 0;
     }
     .error{
@@ -3450,7 +3460,7 @@ table{
           border: 0;
           font-size: $size16;
           padding: $size10 15px $size10 46px;
-          @include box-shadow(0 2px 3px 0 rgba(20, 50, 80, 0.05));
+          @include box-shadow(0 2px 3px 0 rgba(34, 125, 242, 1));
           &::-webkit-input-placeholder {
             /* Chrome/Opera/Safari */
             color: rgba(0, 0, 0, 0.75);

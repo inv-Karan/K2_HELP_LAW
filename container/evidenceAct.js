@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
-import { PageFrame, CommonTabs } from '../component/index'
+import { PageFrame, CommonTabs, Collapsable } from '../component/index'
 import { SearchIcon } from '@material-ui/icons/Search'
 import { CardComponent } from '../component/index'
 import { bookmarks } from "../utility/constants"
@@ -33,10 +33,11 @@ const EvidenceAct = () => {
         </div>
       </div>
       <Grid container>
-        <CardComponent 
-          label={`22`}
-          sub={`2015`}
+      <CardComponent 
+          label={`22 lorem ipsum`}
+          sub={`2015 lorem ipsum`}
         />
+        <Collapsable />
       </Grid>
       {/* <Grid container>
           {bookmarks.map(({ label, sub, pageLink, bookmark }) => <CardComponent
