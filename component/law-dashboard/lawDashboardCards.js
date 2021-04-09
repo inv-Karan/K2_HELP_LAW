@@ -16,8 +16,10 @@ const DashboardCards = () => {
       <Grid item>
         <Grid>
           <Grid item className={'formSquare'}>
+            <Grid item classes={'label'}>
             <h1>LAWS</h1>
-            
+            </Grid>  
+                      
               <Button text={`View All`} onClick={() => {
                 router.push('/law-list')
               }}></Button>

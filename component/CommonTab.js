@@ -4,7 +4,7 @@ import Color from '../styles/colors'
 const CommonTabs = (props) => {
   const { selectedTab, changeSelectedTab, tabs } = props;
 
-  return <div style={{padding: 1,borderRadius: 20,backgroundColor: "##f5f5f5"}}>
+  return <div style={{padding: 1,borderRadius: 20,backgroundColor: "#f5f5f5"}}>
             <div>
             <div style={{display: "block"}}>
                 {
