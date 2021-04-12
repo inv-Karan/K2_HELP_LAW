@@ -45,7 +45,7 @@ const LawDetails = () => {
       </div>
       <Grid>
         <CardComponent 
-          label={`Lorem Ipsum`}
+          label={`IPC Act`}
           sub={`lorem ipsum`}
         />
       </Grid>
