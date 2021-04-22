@@ -27,9 +27,10 @@ import PublicLayout from './publicLayout'
 // import NPT from "./noPaginationTable"
 import CommonTabs from './CommonTab'
 import BlogBody from './blogBody'
-import CardComponent from './cardComponent'
+import CardComponent from './cardcomponent'
 // import MP from './monthPicker'
 // import YP from './yearPicker'
 import Collapsable from './collapsable'
+import Card from './card'
 
-export {PublicLayout, BlogBody, CardComponent, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable }
+export {PublicLayout, BlogBody, CardComponent,Card, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable }

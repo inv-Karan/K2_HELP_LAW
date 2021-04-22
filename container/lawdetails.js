@@ -2,30 +2,20 @@ import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
 import { PageFrame, CommonTabs } from '../component/index'
-import { CardComponent } from '../component/index'
+import { Card, CardComponent } from '../component/index'
 // import Blog from './blog'
 import { useRouter } from 'next/router'
 
-const LawDetails = () => {
+const LawDetails = (props) => {
   const [selectedTab, changeSelectedTab] = useState('hindi')
   const router = useRouter()
-
+  const { classes, law } = props
+  const { label, description, section, summary, inShort,bookmark } = law || {}
   return <>
     <PageFrame>
-      <Grid item className={'createSelect formSquare'}>
+      <Grid item>
         <h1>Laws Details</h1>
       </Grid>
-      <Grid container>
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          {/* <SearchIcon style {{position: 'absolute', left: 0, top: 15, width: 20, height: 20}} /> */}
-          <TextField
-            style={{ textIndent: 30 }}
-            placeholder={'Search'}
-          />
-        </div>
-      </Grid>
-      <div className={'LawListPage'}>
-        <div className={'tab'}>
           <CommonTabs
             tabs={
               [
@@ -33,42 +23,52 @@ const LawDetails = () => {
                 { label: 'English', value: 'english' },
                 { label: 'Gujarati', value: 'gujarati' },
                 { label: 'Marathi', value: 'marathi' },
-                // { label: 'Blogs', value: 'blog', component: <Blog /> }
               ]
             }
             changeSelectedTab={changeSelectedTab}
             selectedTab={selectedTab}
           />
+      <Card>
+        <div className={classes.borderCardChildren}>
+          <p className={classes.labelStyle}>{label}</p>
+          <p className={classes.subStyle}>{description}</p>
+          <img src={bookmark}/>
         </div>
-      </div>
-      <Grid>
-        <CardComponent 
-          label={`IPC Act`}
-          sub={`lorem ipsum`}
-        />
-      </Grid>
-      <Grid>
-      <CardComponent 
-          label={`Section`}
-          sub={`lorem ipsum`}
-        />
-        <CardComponent 
-          label={'Summary'}
-          sub={'lorem ipsum'}
-        />
-      </Grid>
-      <Grid>
-        <CardComponent 
-          label={`In Short`}
-          sub={`lorem ipsum`}
-        />
-      </Grid>
+      </Card>
+      <Card>
+        <div className={classes.borderCardChildren}>
+          <p className={classes.labelStyle}>{'Section'}</p>
+          <p className={classes.subStyle}>{section}</p>
+          <p className={classes.labelStyle}>{'Summary'}</p>
+          <p className={classes.subStyle}>{summary}</p>
+        </div>
+      </Card>
+      <Card>
+        <div className={classes.borderCardChildren}>
+          <p className={classes.labelStyle}>{'In Short'}</p>
+          <p className={classes.subStyle}>{inShort}</p>
+        </div>
+      </Card>
     </PageFrame>
   </>
 }
 
 const STYLES = {
-  card: {}
+  borderCardChildren: { backgroundColor: 'white', padding: 10 },
+  labelStyle: {
+    fontfamily: 'Public Sans',
+    fontstyle: 'normal',
+    fontweight: 600,
+    fontsize: '18px',
+    color: '#227df2',
+  },
+  subStyle: {
+    fontfamily: 'Public Sans',
+    fontstyle: 'normal',
+    fontweight: 'normal',
+    fontsize: '13px',
+    color: '#787878',
+  },
 }
 
 export default withStyles(STYLES)(LawDetails)

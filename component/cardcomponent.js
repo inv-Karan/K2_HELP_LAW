@@ -1,12 +1,14 @@
 import React from 'react'
 import { withStyles, Grid } from '@material-ui/core'
+import { BorderColor } from '@material-ui/icons'
 
 const CardComponent = (props) => {
   let { classes, onPageChange, label, imgSrc, sub, bookmark } = props
   return <Grid
     sm={2}
-    item className={[classes.card, classes.cardRectangle, classes.clickableCard]}
+    item className={[classes.card,classes.clickableCard]}
     onClick={() => onPageChange()} >
+      <div style={{backgroundColor: 'white', padding: 10}}>
     <div className={classes.labelStyle} >
       {label}
     </div>
@@ -15,6 +17,7 @@ const CardComponent = (props) => {
     </p>
     <img src={imgSrc} />
     {bookmark}
+    </div>
   </Grid>
 }
 
@@ -25,11 +28,11 @@ const STYLES = {
     height: '93px',
     left: '21px',
     top: '911px',
-    padding: 10,
+    paddingTop: 5,
     margin: 10,
-
-    background: '#FFFFFF',
-    borderRadius: '8px'
+    background: '#227DF2',
+    borderRadius: '8px',
+    
   },
   labelStyle: {
     position: 'inherit',
