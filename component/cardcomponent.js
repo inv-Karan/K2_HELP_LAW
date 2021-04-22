@@ -20,13 +20,6 @@ const CardComponent = (props) => {
 
 const STYLES = {
   card: {
-    // width: "100%",
-    // height: '139px',
-    // borderRadius: '8px',
-    // backgroundColor: '#ffffff',
-    // margin: 10,
-    // padding: 10,
-    // position: 'inherit'
     position: 'inherit',
     width: '100%',
     height: '93px',
