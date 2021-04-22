@@ -1,5 +1,5 @@
 import React from 'react'
-import LAWDETAILS from '../container/lawdetails'
+import LAWDETAILS from '../container/lawDetails'
 
 const LawDetailsPage = () => {
   return <>

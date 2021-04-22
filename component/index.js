@@ -27,7 +27,7 @@ import PublicLayout from './publicLayout'
 // import NPT from "./noPaginationTable"
 import CommonTabs from './CommonTab'
 import BlogBody from './blogBody'
-import CardComponent from './cardcomponent'
+import CardComponent from './cardComponent'
 // import MP from './monthPicker'
 // import YP from './yearPicker'
 import Collapsable from './collapsable'
