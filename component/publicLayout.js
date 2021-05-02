@@ -14,7 +14,6 @@ const PublicLayout = (props) => {
 
   return <>
     {apiSpinner > 0 && <div className={'loading-icon'}> <CircularProgress /></div>}
-    <Logo />
     {props.children}
     <Footer />
   </>

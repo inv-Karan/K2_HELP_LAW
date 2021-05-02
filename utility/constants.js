@@ -1,5 +1,71 @@
 import Image from './images'
 
+export const Menu = [
+    {
+      text: 'Department',
+      subMenu: [
+      {
+        text: 'Laws',
+        link: '/law-list',
+      },
+      {
+        text: 'Judgements',
+        link: '/judgement-list',
+      },
+      {
+        text: 'Acts',
+        link: '/bookmark-list',
+      },
+    ]
+    },
+    {
+        text: 'Type',
+        subMenu: [
+        {
+          text: 'Section',
+          link: '/judgement-list',
+        },
+        {
+          text: 'Chapter',
+          link: '/judgement-list',
+        },
+        {
+          text: 'Judgements',
+          link: '/judgement-list',
+        },
+        {
+          text: 'Rules',
+          link: '/judgement-list',
+        },
+        {
+          text: 'Details',
+          link: '/judgement-list',
+        },
+      ]
+      },
+      {
+        text: 'Language',
+        subMenu: [
+        {
+          text: 'English',
+          link: '/bookmark-list',
+        },
+        {
+          text: 'Hindi',
+          link: '/bookmark-list',
+        },
+        {
+          text: 'Gujarati',
+          link: '/bookmark-list',
+        },
+        {
+          text: 'Marathi',
+          link: '/bookmark-list',
+        }
+      ]
+      },
+  ]
+
 export const laws = [
     {
         label: 'I.P.C act',
@@ -28,58 +94,98 @@ export const laws = [
     {
         label: 'Evidence act',
         img: '',
-        pageLink: '/evidence-act',
+        pageLink: '/law-detail/evidence',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'evidence',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'M.V. act',
         img: '',
-        pageLink: '/mv-act',
+        pageLink: '/law-detail/mv',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'mv',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'G.P. act',
         img: '',
-        pageLink: '/gp-act',
+        pageLink: '/law-detail/gp',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'gp',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'Prohibition act',
         img: '',
-        pageLink: '/prohibition-act',
+        pageLink: '/law-detail/prohibition',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'prohibition',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'Gambling act',
         img: '',
-        pageLink: '/gambling-act',
+        pageLink: '/law-detail/gambling',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'gambling',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'P.O.C.S.O.',
         img: '',
-        pageLink: '/pocso',
+        pageLink: '/law-detail/pocso',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'pocso',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'S.C.S.T. act',
         img: '',
-        pageLink: '/scst-act',
+        pageLink: '/law-detail/scst',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'scst',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
     {
         label: 'GAP act',
         img: '',
-        pageLink: '/gap-act',
+        pageLink: '/law-detail/gap',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmark,
+        lawName: 'gap',
+        description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
+        section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
+        summary: 'An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.An Act to make provisions to deal with the problem of the black money that undisclosed foreign income and assets,the procedure for dealing with such income and assest and to provide for imposition of tax on any undisclosed foreign income and asset held outside india and for matters connected therewith or incidental thereto.',
+        inShort: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015'
     },
 ];
 

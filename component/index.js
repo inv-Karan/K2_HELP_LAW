@@ -32,5 +32,7 @@ import CardComponent from './cardcomponent'
 // import YP from './yearPicker'
 import Collapsable from './collapsable'
 import Card from './card'
+import DetailsTabs from './detailsTabs'
+import ListTabs from './listTabs'
 
-export {PublicLayout, BlogBody, CardComponent,Card, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable }
+export {PublicLayout, BlogBody, CardComponent,Card, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable, DetailsTabs, ListTabs }

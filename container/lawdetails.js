@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, CommonTabs } from '../component/index'
+import { PageFrame, DetailsTabs, Collapsable } from '../component/index'
 import { Card, CardComponent } from '../component/index'
 // import Blog from './blog'
 import { useRouter } from 'next/router'
@@ -10,13 +10,13 @@ const LawDetails = (props) => {
   const [selectedTab, changeSelectedTab] = useState('hindi')
   const router = useRouter()
   const { classes, law } = props
-  const { label, description, section, summary, inShort,bookmark } = law || {}
+  const { label, description, section, summary, inShort, bookmark } = law || {}
   return <>
     <PageFrame>
       <Grid item>
-        <h1>Laws Details</h1>
+        <h1 className={classes.labelStyle}>Laws Details</h1>
       </Grid>
-          <CommonTabs
+          <DetailsTabs
             tabs={
               [
                 { label: 'Hindi', value: 'hindi' },
@@ -49,6 +49,9 @@ const LawDetails = (props) => {
           <p className={classes.subStyle}>{inShort}</p>
         </div>
       </Card>
+      <Grid>
+        <Collapsable />
+      </Grid>
     </PageFrame>
   </>
 }

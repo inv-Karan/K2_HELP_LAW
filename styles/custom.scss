@@ -1082,6 +1082,24 @@ table{
   }
 }
 
+.logoContainer{
+  display: flex;
+  padding: 10px 0px;
+  .logoimg{
+    padding: 10px;
+    height: 80px;
+  }
+  .logoText{
+    color: #227DF2
+  }
+}
+
+.gradientButton{
+  background: linear-gradient(121.43deg, #83BAFF 3.65%, #3F7AFF 94.46%);
+  border-radius: 40px !important;
+  color: 'white';
+}
+
 /* Login Page Css Start Here... */
 .loginpage{
   h1{

@@ -7,10 +7,10 @@ import { useDispatch, useSelector } from "react-redux"
 // import { deleteUser, resetPassword } from "../redux/action/userAction"
 
 const ProfileComponent = (props) => <div className={'profileBlk'}>
-  <img src={props.profile ? `${urlMapper.PROFILE_IMAGES}${props.profile}` : `/images/staff.png`} alt="" className={'profileImg'} />
+  <img src={props.profile ? `${urlMapper.PROFILE_IMAGES}${props.profile}` : `/images/image.png`} alt="" className={'profileImg'} />
   <div className={'profileBlkInn'}>
-    <div className={'name'}>{props.name}</div>
-    <div className={'discription'}>{props.email}</div>
+    <div className={'name'}>{props.name || 'John'}</div>
+    <div className={'discription'}>{props.email || 'john@gmail.com'}</div>
   </div>
 </div>
 
@@ -22,7 +22,8 @@ const Header = (props) => {
 
   return <header>
     <div className={'logo'}>
-      <img src={'/images/farmlogo.png'} alt="" style={{ height: '70px' }} />
+      <img src={'/images/image.png'} alt="" style={{ height: '70px' }} />
+      <h1 className={'logotext'}>HELPLAW</h1>
     </div>
     <div className={'rightCol'}>
       <div className="dropdown">

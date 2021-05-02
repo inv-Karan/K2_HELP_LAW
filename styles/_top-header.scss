@@ -21,6 +21,10 @@ header{
       width: auto;
     }
   }
+  .logotext{
+    color: $primary-color;
+    padding-left: 10px;
+  }
   .rightCol{
     display: flex;
     align-items: center;

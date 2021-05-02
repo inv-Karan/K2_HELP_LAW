@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { TextBox, Button } from '../component/index';
+import { TextBox, Button, Container, Logo } from '../component/index';
 // import { addMobile } from "../redux/action/machineryAction"
 
 const addMobileSchema = Yup.object({
@@ -40,7 +40,8 @@ function addMobile() {
       handleSubmit
     }) => {
 
-      return <div className={styles.main}>
+      return <Container>
+        <Logo />
         <TextBox
           label={'Mobile Number'}
           isRequired={true}
@@ -54,8 +55,10 @@ function addMobile() {
           <div className={'error'}>{errors.mobile}</div>
         ) : null}
 
-        <Button text='Proceed' type='Submit' onClick={handleSubmit} />
-      </div>
+        <Button text='Proceed' type='Submit' 
+        customClass={'gradientButton'}
+        onClick={handleSubmit} />
+      </Container>
     }}
   </Formik>
 };

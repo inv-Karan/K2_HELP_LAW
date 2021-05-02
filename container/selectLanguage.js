@@ -3,7 +3,8 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { Select, Button } from '../component/index';
+import { Select, Button, Container, Logo } from '../component/index';
+import { Gradient } from '@material-ui/icons';
 // import { selectLanguage } from "../redux/action/machineryAction"
 
 
@@ -40,23 +41,26 @@ function selectLanguage() {
       handleSubmit
     }) => {
 
-      return <div className={styles.main}>
+      return <Container>
+        <Logo />
         <Select
-          label={'Select Language'}
+          label={'Please select your language'}
           isRequired={true}
           value={values.language}
           handleChange={handleChange}
           name="language"
           placeholder='Select Language'
           onBlur={handleBlur}
-          list={['English', 'हिन्दी', 'ગુજરાતી']}
+          list={['English', 'हिन्दी', 'ગુજરાતી', 'मराठी']}
         />
         {errors.language && touched.language ? (
           <div className={'error'}>{errors.language}</div>
         ) : null}
 
-        <Button text='Next' type='Submit' onClick={handleSubmit} />
-      </div>
+        <Button text='Next' type='Submit'
+          customClass={'gradientButton'}
+          onClick={handleSubmit} />
+      </Container>
     }}
   </Formik>
 };

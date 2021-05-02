@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import { TextBox, Button } from '../component/index';
+import { TextBox, Button, Container, Logo } from '../component/index';
 // import { addVerification } from "../redux/action/machineryAction"
 
 const addVerificationSchema = Yup.object({
@@ -40,7 +40,8 @@ function addVerification() {
       handleSubmit
     }) => {
 
-      return <div className={styles.main}>
+      return <Container>
+        <Logo />
         <TextBox
           label={'Verification Code'}
           isRequired={true}
@@ -54,8 +55,11 @@ function addVerification() {
           <div className={'error'}>{errors.otp}</div>
         ) : null}
 
-        <Button text='Proceed' type='Submit' onClick={handleSubmit} />
-      </div>
+        <Button text='Proceed' type='Submit' 
+        customClass={'gradientButton'}
+        onClick={handleSubmit} />
+        <p onClick={() => {}}>Resend OTP</p>
+      </Container>
     }}
   </Formik>
 };

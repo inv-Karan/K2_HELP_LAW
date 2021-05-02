@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, CommonTabs } from '../component/index'
+import { PageFrame, ListTabs } from '../component/index'
 import { CardComponent } from '../component/index'
 import { judgements } from "../utility/constants"
 // import Blog from './blog'
@@ -25,7 +25,7 @@ const JudgementList = () => {
       </Grid>
       <div className={'JudgementListPage'}>
         <div className={'tab'}>
-          <CommonTabs
+          <ListTabs
             tabs={
               [
                 { label: 'Sections', value: 'sections' },
