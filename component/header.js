@@ -18,7 +18,7 @@ const Header = (props) => {
   let { menuIconClick, sidemunuIsOpen } = props
   const router = useRouter()
   const dispatch = useDispatch();
-  const { name, email, profile } = useSelector((state) => state.user.userData || {});
+  // const { name, email, profile } = useSelector((state) => state.user.userData || {});
 
   return <header>
     <div className={'logo'}>
@@ -46,7 +46,7 @@ const Header = (props) => {
       <div onClick={() => router.push('user-profile')} className={'profileDropDown'}>
         <div className={'profileInn'}>
           {/* <img src={'/images/notification.svg'} /> */}
-          <ProfileComponent profile={profile} name={name} email={email} />
+          {/* <ProfileComponent profile={profile} name={name} email={email} /> */}
           <button className={`mobNav ${sidemunuIsOpen ? 'mobNavClose' : ""}`} onClick={() => menuIconClick()}></button>
         </div>
       </div>

@@ -15,7 +15,7 @@ function updateProfile() {
   const updateProfile = (values) => {
     // dispatch(updateProfile(values))
     // .then(res =>
-    router.push('/act-list')
+    router.push('/law-dashboard')
     // )
   }
 
@@ -40,6 +40,7 @@ function updateProfile() {
 
       return <Container>
         <Logo />
+        <h1>Sign Up</h1>
         <TextBox
           label={'Name'}
           isRequired={true}

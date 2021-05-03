@@ -42,6 +42,7 @@ function addVerification() {
 
       return <Container>
         <Logo />
+        <h1>Sign Up</h1>
         <TextBox
           label={'Verification Code'}
           isRequired={true}

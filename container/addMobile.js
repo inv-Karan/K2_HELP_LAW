@@ -42,6 +42,7 @@ function addMobile() {
 
       return <Container>
         <Logo />
+        <h1>Sign Up</h1>
         <TextBox
           label={'Mobile Number'}
           isRequired={true}

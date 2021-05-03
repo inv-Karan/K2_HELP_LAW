@@ -4,7 +4,7 @@ import Color from '../styles/colors'
 import { useRouter } from 'next/router'
 import { useSelector } from "react-redux";
 // import urlMapper from '../utiliy/api/urlMapper'
-import { HyperLink, Button, } from '../component/index'
+import { HyperLink, Button } from '../component/index'
 
 
 const ProfileComponent = (props) => <div className={'profileBlk'}>
@@ -19,7 +19,8 @@ const Footer = (props) => {
   let { menuIconClick, sidemunuIsOpen, classes } = props
   const router = useRouter()
 
-  return <div className={'footerContainer'} onClick={() => router.push('dashboard')}>
+  return <div className={'footerContainer'} onClick={() => router.push('/')}>
+    <HyperLink href={'support@k2helplaw.com'} text={'support@k2helplaw.com'}/>
   </div>
 }
 const STYLES = {

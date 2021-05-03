@@ -43,6 +43,7 @@ function selectLanguage() {
 
       return <Container>
         <Logo />
+        <h1>Welcome to K2helplaw</h1>
         <Select
           label={'Please select your language'}
           isRequired={true}
