@@ -15,9 +15,13 @@ const DashboardHeader = (props) => {
     <Grid className={'topFilter'}>
       <Grid item className={'topFilterInn'}>
         <div>
+          <div className={'beside'}>
+          <img src="/images/hello.svg" />
           <h1>{`Hello, John!`}</h1>
+          </div>
+          
           <h3>{`What are you looking for?`}</h3>
-        </div>
+          </div>
       </Grid>
     </Grid>
     <Grid>

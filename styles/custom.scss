@@ -97,7 +97,31 @@ ul{
 .footerContainer{
   height: 70px;
   text-align: right;
-  padding: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  .backCircle{
+    display: flex;
+    background: #EDF4FF;
+    border-radius: 30px;
+    align-items: center;
+    width: 18%;
+    .blueCircle{
+      background: #2F80ED;
+      border-radius: 30px;
+      height: 60px;
+      width: 60px;
+      justify-content: center;
+      display: flex;
+      .imgStyle{
+        width: 30px;
+      }
+    }
+    .text{
+      padding: 0px 10px;
+      font-size: 14px;
+    }
+  }
 }
 
 /* BreadCrumbs Css start here... */
@@ -635,6 +659,7 @@ table{
       }
     }
   }
+
 
   /* Create an Estimate -> Send Tab -> Send Estimate Popup Css start here... */
   &.sendAddPaymentPop{
@@ -1335,6 +1360,10 @@ table{
   .topFilterInn{
     display: flex;
     align-content: center;
+    .beside{
+      display: flex;
+      gap:10px;
+    }
     h1{
       font-family: Poppins;
       font-size: $size24;
@@ -1403,6 +1432,14 @@ table{
     }
   }
 }
+
+.dashboardLabels{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #227DF2;
+}
+
 .dashboardPage{
   .topFilter{
     display: flex;

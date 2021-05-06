@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -22,9 +21,9 @@ function updateProfile() {
   return <Formik
     initialValues={{
       name: "",
-      mobile: "",
-      place: "",
-      account_type: ""
+      email: "",
+      state: "",
+      role: ""
     }}
     validationSchema={updateProfileSchema}
     onSubmit={(values) => {
@@ -51,31 +50,31 @@ function updateProfile() {
           onBlur={handleBlur}
         />
         <TextBox
-          label={'Mobile Number'}
+          label={'Email ID'}
           isRequired={true}
           value={values.mobile}
           handleChange={handleChange}
           name="mobile"
-          placeholder='Mobile Number'
+          placeholder='Enter your Email'
           onBlur={handleBlur}
         />
         <Select
-          label={'Place'}
+          label={'State'}
           isRequired={true}
           value={values.place}
           handleChange={handleChange}
           name="place"
-          placeholder='Place'
+          placeholder='Select your State'
           onBlur={handleBlur}
           list={['Gujarat[GJ]']}
         />
         <Select
-          label={'Account Type'}
+          label={'Role'}
           isRequired={true}
           value={values.account_type}
           handleChange={handleChange}
           name="account_type"
-          placeholder='Account Type'
+          placeholder='Select your Role'
           onBlur={handleBlur}
           list={['CA', 'Advocate', 'Police', 'Public']}
         />

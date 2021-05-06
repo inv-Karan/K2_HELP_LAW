@@ -13,8 +13,10 @@ const lawDashboard = () => {
   return (
     <PrimaryLayout>
       <PageFrame>
+        <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
         <LAWDASHBOARDCARDS />
+        </div>
       </PageFrame>
     </PrimaryLayout>
   )

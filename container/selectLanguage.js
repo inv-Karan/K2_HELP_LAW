@@ -1,10 +1,8 @@
 import React from 'react';
-import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { Select, Button, Container, Logo } from '../component/index';
-import { Gradient } from '@material-ui/icons';
 // import { selectLanguage } from "../redux/action/machineryAction"
 
 
