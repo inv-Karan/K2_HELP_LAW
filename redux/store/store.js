@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import { createWrapper, HYDRATE } from "next-redux-wrapper";
+import { createWrapper } from "next-redux-wrapper";
 import thunkMiddleware from "redux-thunk";
 import reducer from "../reducer/index";
 
@@ -23,7 +23,7 @@ const makeStore = ({ isServer }) => {
 
     const persistConfig = {
       key: "nextjs",
-      whitelist: ['user', 'blog', 'output', 'supply', 'machinery', 'activity', 'query', 'weather', 'chat', 'chart', 'response', 'document', 'calendar', 'staff'], // only counter will be persisted, add other reducers if needed
+      whitelist: ['user'], // only counter will be persisted, add other reducers if needed
       storage, // if needed, use a safer storage
     };
 

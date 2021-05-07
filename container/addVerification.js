@@ -3,22 +3,21 @@ import { useRouter } from 'next/router';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { TextBox, Button, Container, Logo } from '../component/index';
-// import { addVerification } from "../redux/action/machineryAction"
+import { checkOTP } from "../redux/action/userAction"
 
 const addVerificationSchema = Yup.object({
   otp: Yup.string()
     .required("OTP is required")
-    .min(4, "4 digit varification code is required!")
+    .min(6, "6 digit varification code is required!")
 })
 
 function addVerification() {
 
   const router = useRouter();
   const addVerification = (values) => {
-    // dispatch(addVerification(values))
-    // .then(res =>
+    dispatch(checkOTP(values))
+    .then(res =>
     router.push('/update-profile')
-    // )
   }
 
   return <Formik
