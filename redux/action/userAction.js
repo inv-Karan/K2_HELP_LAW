@@ -138,14 +138,14 @@ import {
     })
   };
   
-  export const sendOTP = (mobile) => (dispatch) => {
+  export const sendOTP = (values) => (dispatch) => {
     return new Promise((resolve, reject) => {
-      sendHttpCall(dispatch, 'post', `${urlMapper.sendOTP}`, mobile)
+      sendHttpCall(dispatch, 'post', `${urlMapper.sendOTP}`, values)
       .then(res => {
         dispatch({
           type: USER_GET_OTP,
           payload: res,
-					mobile: mobile
+					mobile: values.mobile
         });
         return resolve(res)
       }).catch(err => {
@@ -154,11 +154,11 @@ import {
     })
   };
 
-  export const checkOTP = (otp) => (dispatch, getState) => {
-		let mobile = getState().user.mobile.mobile
+  export const checkOTP = (value) => (dispatch, getState) => {
+		let mobile = getState().user.mobile
     let values = {
       mobile,
-      otp
+      otp: value.otp
     }
     return new Promise((resolve, reject) => {
       sendHttpCall(dispatch, 'post', `${urlMapper.checkOTP}`, values, )
