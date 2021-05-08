@@ -2,19 +2,16 @@ import {
     USER_SET_TOKEN,
     USER_GET_TOKEN,
     USER_DELETE_TOKEN,
-    STATUS_GET,
-    STATUS_SHOW,
     USER_SET_ID,
-    WEATHER_DELETE,
     USER_GET_OTP
   } from "./type";
   import {
     sendHttpCall
-  } from '../../utiliy/api/apiCaller';
+  } from '../../utility/api/apiCaller';
   import {
     toastr
   } from 'react-redux-toastr';
-  import urlMapper from '../../utiliy/api/urlMapper';
+  import urlMapper from '../../utility/api/urlMapper';
   
   export const newUser = (values,webToken) => (dispatch) => {
     return new Promise((resolve, reject) => {
@@ -35,11 +32,11 @@ import {
     })
   };
   
-  export const updateUser = (values,id) => (dispatch) => {
+  export const updateUser = (values) => (dispatch) => {
     return new Promise((resolve, reject) => {
-      sendHttpCall(dispatch, 'post', urlMapper.updateProfile+id, values)
+      sendHttpCall(dispatch, 'post', urlMapper.completeProfile, values)
           .then(res => {
-            dispatch(setUser(values.email, values.password))
+            dispatch(setUser(values.phone, values.password))
             .then(r => {
               return resolve(res)
             })
@@ -136,9 +133,7 @@ import {
         type: USER_DELETE_TOKEN,
         payload: {},
       });
-      dispatch({
-        type: WEATHER_DELETE
-      });
+
       return resolve('hi')
     })
   };
@@ -150,6 +145,7 @@ import {
         dispatch({
           type: USER_GET_OTP,
           payload: res,
+					mobile: mobile
         });
         return resolve(res)
       }).catch(err => {
@@ -158,13 +154,14 @@ import {
     })
   };
 
-  export const checkOTP = (mobile, otp) => (dispatch) => {
+  export const checkOTP = (otp) => (dispatch, getState) => {
+		let mobile = getState().user.mobile.mobile
     let values = {
       mobile,
       otp
     }
     return new Promise((resolve, reject) => {
-      sendHttpCall(dispatch, 'post', `${urlMapper.verifyOTP}`, values)
+      sendHttpCall(dispatch, 'post', `${urlMapper.checkOTP}`, values, )
       .then(res => {
         return resolve(res)
       }).catch(err => {
@@ -188,25 +185,8 @@ import {
     })
   };
   
-  export const getStatus = () => (dispatch, getState) => {
-    return new Promise((resolve, reject) => {
-      const user_id = getState().user.userData.user_id
-      sendHttpCall(dispatch, 'get', `${urlMapper.getStatus}${user_id}`)
-      .then(res => {
-        dispatch({
-          type: STATUS_GET,
-          payload: res,
-        });
-        return resolve(res)
-        }).catch(err => {
-          return reject(err)
-        })
-    })
-  };
-  
   export const updateStatus = (values) => (dispatch, getState) => {
     return new Promise((resolve, reject) => {
-      debugger
       const user_id = getState().user.userData.user_id
       values.user_id = user_id
       sendHttpCall(dispatch, 'post', `${urlMapper.addAttendance}`, values)

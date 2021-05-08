@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { TextBox, Button, Container, Logo } from '../component/index';
 import { checkOTP } from "../redux/action/userAction"
+import { useDispatch } from 'react-redux'
 
 const addVerificationSchema = Yup.object({
   otp: Yup.string()
@@ -13,11 +14,13 @@ const addVerificationSchema = Yup.object({
 
 function addVerification() {
 
-  const router = useRouter();
+  const router = useRouter(); 
+  const dispatch = useDispatch();
   const addVerification = (values) => {
     dispatch(checkOTP(values))
     .then(res =>
     router.push('/update-profile')
+    )
   }
 
   return <Formik

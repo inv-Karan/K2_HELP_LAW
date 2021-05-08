@@ -1,5 +1,5 @@
 import axios from 'axios';
-// const baseUrl = 'http://logicalloop.com/farmeasy/public/api/'
+const baseUrl = 'https://k2helplaw.herokuapp.com/api/v1/'
 
 const post = (url = '', data = '', config = {}) => {
   return axios.post(url, data, config)
@@ -26,7 +26,7 @@ const HttpClient = {
   get,
   put,
   delete: del,
-  // baseUrl,
+  baseUrl,
   patch
   // server: SERVERURL
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { withStyles } from '@material-ui/core';
 import { useSelector } from "react-redux";
 import { useRouter } from 'next/router';
-import { Footer, Logo } from './index';
 
 const PublicLayout = (props) => {
   const router = useRouter()
@@ -15,7 +14,7 @@ const PublicLayout = (props) => {
   return <>
     {apiSpinner > 0 && <div className={'loading-icon'}> <CircularProgress /></div>}
     {props.children}
-    <Footer />
+    {/* <Footer /> */}
   </>
 }
 const STYLES = {

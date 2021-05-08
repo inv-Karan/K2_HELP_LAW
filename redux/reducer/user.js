@@ -1,7 +1,6 @@
 import {
     USER_DELETE_TOKEN,
     USER_SET_TOKEN,
-    STATUS_GET,
     USER_SET_ID,
     PROFILE_UPDATE,
     USER_GET_OTP
@@ -13,6 +12,7 @@ import {
     details: [],
     user_id: 0,
     otp: '',
+    mobile:''
   };
   
   // Creating my reducer
@@ -38,12 +38,8 @@ import {
       case USER_GET_OTP:
         return {
           ...state,
-          otp: action.payload
-        }
-      case STATUS_GET:
-        return {
-          ...state,
-          status: action.payload
+          otp: action.payload,
+          mobile: action.mobile
         }
       case USER_SET_ID:
         return {

@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { TextBox, Button, Container, Logo } from '../component/index';
 import { sendOTP } from '../redux/action/userAction'
+import { useDispatch } from 'react-redux'
 
 const addMobileSchema = Yup.object({
   mobile: Yup.string()
@@ -14,8 +15,12 @@ const addMobileSchema = Yup.object({
 function addMobile() {
 
   const router = useRouter();
-  const sendOTP = (values) => {
+  const dispatch = useDispatch();
+  const addPhone = (values) => {
+    dispatch(sendOTP(values))
+    .then(res =>
     router.push('/add-verification')
+    )
   }
 
   return <Formik
@@ -24,7 +29,7 @@ function addMobile() {
     }}
     validationSchema={addMobileSchema}
     onSubmit={(values) => {
-      sendOTP(values)
+      addPhone(values)
     }}
   >
     {({
