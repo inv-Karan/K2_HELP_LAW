@@ -1,5 +1,6 @@
 import {
-    GET_LAWS
+  FIND_LAW_BY_ID,
+  GET_LAWS
   } from "./type";
   import {
     sendHttpCall
@@ -16,6 +17,22 @@ import {
         .then(res => {
           dispatch({
             type: GET_LAWS,
+            payload: res.data,
+          });
+          return resolve(res)
+        }).catch(err => {
+          toastr.error('Error', 'Something went wrong!')
+          return reject()
+        })
+    })
+  };
+
+  export const findLawById = () => (dispatch) => {
+    return new Promise((resolve, reject) => {
+      sendHttpCall(dispatch, 'post', `${urlMapper.findLawById}${_id}`)
+        .then(res => {
+          dispatch({
+            type: FIND_LAW_BY_ID,
             payload: res.data,
           });
           return resolve(res)

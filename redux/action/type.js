@@ -8,4 +8,7 @@ export const PROFILE_UPDATE = 'PROFILE_UPDATE';
 export const RESET_PASSWORD = 'RESET_PASSWORD';
 
 export const GET_LAWS = 'GET_LAWS';
+export const FIND_LAW_BY_ID = 'FIND_LAW_BY_ID';
+
 export const GET_JUDGEMENTS = 'GET_JUDGEMENTS';
+export const FIND_JUDGEMENT_BY_ID = 'FIND_JUDGEMENT_BY_ID';

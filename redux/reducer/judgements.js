@@ -1,9 +1,11 @@
 import {
-    GET_JUDGEMENTS
+  FIND_JUDGEMENT_BY_ID,
+  GET_JUDGEMENTS
   } from "../action/type";
   
   const initialState = {
-    judgements: {}
+    judgements: {},
+    judgementById: {}
   };
   
   // Creating my reducer
@@ -13,6 +15,11 @@ import {
         return {
           ...state,
           judgements: action.payload
+        };
+      case FIND_JUDGEMENT_BY_ID:
+        return {
+          ...state,
+          judgementById: action.payload
         };
       default:
           return state;

@@ -7,5 +7,8 @@ export default {
     login: `${BASE_URL}user/login`,
 
     getLaws: `${BASE_URL}user/getLaws`,
-    getJudgements: `${BASE_URL}user/getJudgements`
+    findLawById: `${BASE_URL}user/findLawById`,
+
+    getJudgements: `${BASE_URL}user/getJudgements`,
+    findJudgementById: `${BASE_URL}user/findJudgementById`
 }
