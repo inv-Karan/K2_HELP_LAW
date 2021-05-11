@@ -2,11 +2,10 @@ import React  from 'react'
 import { Grid } from '@material-ui/core'
 import { laws, judgements, bookmarks } from "../../utility/constants"
 import { CardComponent, Button } from '../index'
-import { useRouter } from 'next/router'
 
 
-const DashboardCards = () => {
-  const router = useRouter()
+const DashboardCards = (props) => {
+  const { lawList, judgementList, router } = props
   const cardColors = ['#4E89AE', '#ED6663', '#FFA372']
 
   return <>
@@ -18,10 +17,10 @@ const DashboardCards = () => {
               }}></Button>
           </div>
           <Grid container>
-          {laws.map(({ label, sub, pageLink, bookmark }) => <CardComponent
-            sub={sub}
+          {lawList.map(({ lawTitle, lawDescription, pageLink, bookmark }) => <CardComponent
+            sub={lawDescription}
             onPageChange={() => router.push(pageLink)}
-            label={label}
+            label={lawTitle}
             bookMark={bookmark}
           />)}
           </Grid>
@@ -36,10 +35,10 @@ const DashboardCards = () => {
               }}></Button>
           </Grid>
           <Grid container>
-          {judgements.map(({ label, sub, pageLink, bookmark }) => <CardComponent
-            sub={sub}
+          {judgementList.map(({ judgementTitle, judgementInShort, pageLink, bookmark }) => <CardComponent
+            sub={judgementInShort}
             onPageChange={() => router.push(pageLink)}
-            label={label}
+            label={judgementTitle}
             bookMark={bookmark}
           />)}
           </Grid>

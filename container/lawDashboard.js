@@ -5,17 +5,20 @@ import { PrimaryLayout, PageFrame } from '../component/index'
 import { useRouter } from 'next/router'
 import LAWDASHBOARDHEADER from '../component/law-dashboard/lawDashboardHeader'
 import LAWDASHBOARDCARDS from '../component/law-dashboard/lawDashboardCards'
+import { useSelector } from "react-redux"
 
 
 const lawDashboard = () => {
   const router = useRouter()
+  const laws = useSelector((state) => state.laws.laws || [])
+  const judgements = useSelector((state) => state.judgements.judgements || [])
 
   return (
     <PrimaryLayout>
       <PageFrame>
         <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
-        <LAWDASHBOARDCARDS />
+        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router}/>
         </div>
       </PageFrame>
     </PrimaryLayout>

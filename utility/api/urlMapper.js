@@ -4,5 +4,8 @@ export default {
     sendOTP: `${BASE_URL}user/sendOTP`,
     checkOTP: `${BASE_URL}user/checkOTP`,
     completeProfile: `${BASE_URL}user/completeProfile`,
-    login: `${BASE_URL}user/login`
+    login: `${BASE_URL}user/login`,
+
+    getLaws: `${BASE_URL}user/getLaws`,
+    getJudgements: `${BASE_URL}user/getJudgements`
 }

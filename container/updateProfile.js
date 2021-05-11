@@ -4,7 +4,9 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { TextBox, Select, Button, Container, Logo } from '../component/index';
 import { updateUser } from "../redux/action/userAction"
+import { getLaws } from "../redux/action/lawAction"
 import { useDispatch } from 'react-redux'
+import { getJudgements } from '../redux/action/judgementAction';
 
 const updateProfileSchema = Yup.object({
 })
@@ -16,7 +18,9 @@ function updateProfile() {
   const updateProfile = (values) => {
     dispatch(updateUser(values))
     .then(res =>
-    router.push('/law-dashboard')
+    router.push('/law-dashboard'),
+    dispatch(getLaws()),
+    dispatch(getJudgements())
     )
   }
 
@@ -69,54 +73,54 @@ function updateProfile() {
         <TextBox
           label={'Email ID'}
           isRequired={true}
-          value={values.mobile}
+          value={values.email}
           handleChange={handleChange}
-          name="mobile"
+          name="email"
           placeholder='Enter your Email'
           onBlur={handleBlur}
         />
         <Select
           label={'State'}
           isRequired={true}
-          value={values.place}
+          value={values.state}
           handleChange={handleChange}
-          name="place"
-          placeholder='Select your State'
+          name="state"
+          placeholder='Select your state'
           onBlur={handleBlur}
           list={['Gujarat[GJ]']}
         />
         <Select
-          label={'State'}
+          label={'City'}
           isRequired={true}
-          value={values.place}
+          value={values.city}
           handleChange={handleChange}
-          name="place"
-          placeholder='Select your State'
+          name="city"
+          placeholder='Select your City'
           onBlur={handleBlur}
           list={['Surat[ST]']}
         />
         <Select
           label={'Role'}
           isRequired={true}
-          value={values.account_type}
+          value={values.role}
           handleChange={handleChange}
-          name="account_type"
+          name="role"
           placeholder='Select your Role'
           onBlur={handleBlur}
-          list={['CA', 'Advocate', 'Police', 'Public']}
+          list={['CA', 'Advocate', 'Police', 'Citizen']}
         />
         <Select
-          label={'Role'}
+          label={'Language'}
           isRequired={true}
-          value={values.account_type}
+          value={values.language}
           handleChange={handleChange}
-          name="account_type"
-          placeholder='Select your Role'
+          name="language"
+          placeholder='Select your Language'
           onBlur={handleBlur}
           list={['English', 'हिन्दी', 'ગુજરાતી', 'मराठी']}
         />
         <TextBox
-          label={'firebaseToken'}
+          label={'Firebase Token'}
           isRequired={true}
           value={values.firebaseToken}
           handleChange={handleChange}

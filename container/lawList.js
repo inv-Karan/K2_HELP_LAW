@@ -4,9 +4,7 @@ import { SearchIcon } from '@material-ui/icons/Search'
 import { PageFrame, ListTabs } from '../component/index'
 import { CardComponent } from '../component/index'
 import { laws } from "../utility/constants"
-// import Blog from './blog'
 import { useRouter } from 'next/router'
-import { Router } from 'next/router'
 
 const LawList = () => {
   const [selectedTab, changeSelectedTab] = useState('ca')

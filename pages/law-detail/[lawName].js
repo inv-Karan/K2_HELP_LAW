@@ -7,7 +7,6 @@ const LawDetailsPage = () => {
     const router = useRouter()
   const { lawName } = router.query
   let neededLaw = laws.find(l => l.lawName === lawName)
-  console.log(neededLaw)
   return <>
     <LAWDETAILS law={neededLaw}/>
   </>
