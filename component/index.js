@@ -17,7 +17,7 @@ import Footer from './footer'
 import PageFrame from './pageFrame'
 import Radio from './radio'
 // import Switch from './switch'
-// import Checkbox from './checkbox'
+import Checkbox from './checkbox'
 import PageTitle from './pageTitle'
 import Tabs from './tabs'
 // import {BarChart, DoughnutChart} from './chart'
@@ -34,5 +34,6 @@ import Collapsable from './collapsable'
 import Card from './card'
 import DetailsTabs from './detailsTabs'
 import ListTabs from './listTabs'
+import DashBoard from './law-dashboard/lawDashboardCards'
 
-export {PublicLayout, BlogBody, CardComponent,Card, CommonTabs, Tabs, PageTitle, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable, DetailsTabs, ListTabs }
+export {DashBoard, PublicLayout, BlogBody, CardComponent, Card, CommonTabs, Tabs, PageTitle, Checkbox, Radio, PageFrame, SideMenu, Header, Footer, PrimaryLayout, Select, Upload, CardLayout, Container, Label, Logo, TextBox, HyperLink, Button, Collapsable, DetailsTabs, ListTabs }

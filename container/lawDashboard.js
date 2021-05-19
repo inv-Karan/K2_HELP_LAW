@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { withStyles } from '@material-ui/core'
 import Color from '../styles/colors'
 import { PrimaryLayout, PageFrame } from '../component/index'
@@ -12,13 +12,14 @@ const lawDashboard = () => {
   const router = useRouter()
   const laws = useSelector((state) => state.laws.laws || [])
   const judgements = useSelector((state) => state.judgements.judgements || [])
+  const [showFilterPopup, toggleFilterPopup] = useState(false)
 
   return (
     <PrimaryLayout>
       <PageFrame>
         <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
-        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router}/>
+        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router} toggleFilterPopup = {() => toggleFilterPopup(!showFilterPopup)} />
         </div>
       </PageFrame>
     </PrimaryLayout>

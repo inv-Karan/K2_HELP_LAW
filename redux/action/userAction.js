@@ -47,13 +47,13 @@ import {
     })
   };
   
-  export const setUser = (phone, password, webToken) => (dispatch) => {
+  export const setUser = (email, password) => (dispatch) => {
     return new Promise((resolve, reject) => {
       sendHttpCall(dispatch, 'post', urlMapper.login, {
-          phone,
+          phone: email ? email : phone,
           password,
-          web_id: webToken,
-          device_id: webToken
+          // web_id: webToken,
+          // device_id: webToken
         })
         .then(res => {
           dispatch({

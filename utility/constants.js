@@ -1,9 +1,9 @@
 import Image from './images'
 
-export const Menu = [
+export const Filter = [
     {
       text: 'Department',
-      subMenu: [
+      subFilter: [
       {
         text: 'Laws',
         link: '/law-list',
@@ -20,51 +20,90 @@ export const Menu = [
     },
     {
         text: 'Type',
-        subMenu: [
+        subFilter: [
         {
           text: 'Section',
-          link: '/judgement-list',
+          link: '',
         },
         {
           text: 'Chapter',
-          link: '/judgement-list',
+          link: '',
         },
         {
           text: 'Judgements',
-          link: '/judgement-list',
+          link: '',
         },
         {
           text: 'Rules',
-          link: '/judgement-list',
+          link: '',
         },
         {
           text: 'Details',
-          link: '/judgement-list',
+          link: '',
         },
       ]
       },
       {
         text: 'Language',
-        subMenu: [
+        subFilter: [
         {
           text: 'English',
-          link: '/bookmark-list',
+          link: '',
         },
         {
           text: 'Hindi',
-          link: '/bookmark-list',
+          link: '',
         },
         {
           text: 'Gujarati',
-          link: '/bookmark-list',
+          link: '',
         },
         {
           text: 'Marathi',
-          link: '/bookmark-list',
+          link: '',
         }
       ]
       },
   ]
+
+export const Menu = [
+    {
+        icon: '',
+        text: 'Home',
+        link: '/law-dashboard',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'News',
+        link: '',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'Bookmark',
+        link: '/bookmark-list',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'Calculator',
+        link: '',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'Account',
+        link: '',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'Filter',
+        link: '',
+        subMenu: []
+    }
+]
 
 export const laws = [
     {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { withStyles, Radio } from '@material-ui/core'
 
 const RadioComponent = (props) => {
   let { classes, placeholder, name, handleChange, value, label, width, list, description } = props
@@ -21,4 +20,4 @@ const RadioComponent = (props) => {
 }
 const STYLES = {
 }
-export default withStyles(STYLES)(RadioComponent)
+export default RadioComponent

@@ -101,6 +101,101 @@ nav{
       }
     }
   }
+  // k2 law side menu
+  &.navigation{
+    min-Width: 250px;
+    height: calc(100vh - 70px);
+    border-right: 1px solid darken($gray-light-color, 5%);
+    position: fixed;
+    background: #2F80ED;
+    opacity: 0.9;
+    // overflow-y: auto;
+    @include bellow-md {
+      z-index: 10;
+      @include transform(translateX(-250px));
+      @include transition(all 0.5s);
+    }
+    ul{
+      padding: 0;
+      li{
+        list-style: none;
+        // padding: 0 21px;
+        position: relative;
+        margin-bottom: 25px;
+        cursor: pointer;
+        &.title{
+          font-size: $size20;
+          color: #003E92;
+          text-transform: to-lower-case($string: "");
+          letter-spacing: 1px;
+          padding: 0 21px;
+          margin: 30px 0px 25px 0;
+          font-weight: 600;
+        }
+        div{
+          &.firstLevel{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            line-height: 0.1em;
+          }
+          img{
+            &.leftIcon{
+              position: absolute;
+              left: 0;
+              top: 50%;
+              @include transform(translateY(-50%));
+            }
+            &.expandIcon{
+              @include transform(rotate(180deg));
+              @include transition(all 200ms);
+            }
+          }
+          p{
+            letter-spacing: 0.1px;
+            color: #FFFFFF;
+            font-size: $size18;
+            font-weight: 550;
+            margin: 0;
+            padding: 0 0 0 60px;
+          }
+        }
+        ul{
+          &.firstChild{
+            padding-left: 0;
+            li{
+              letter-spacing: 0.1px;
+              color: $cosmic-cobalt-color;
+              font-size: $size14;
+              font-weight: 500;
+              margin: 12px 0;
+              padding: 0 0 0 42px;
+              color: #FFFFFF;
+              &.active, &:hover{
+                color: $primary-color;
+              }
+            }
+          }
+        }
+        &.active, &:hover{
+          p{
+            color: aqua;
+          }
+        }
+        &.active{
+          div{
+            img{
+              &.expandIcon{
+                @include transform(rotate(0deg));
+                @include transition(all 200ms);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &.mobNav{
     @include bellow-md {
       @include transform(translateX(0px));

@@ -12,3 +12,6 @@ export const FIND_LAW_BY_ID = 'FIND_LAW_BY_ID';
 
 export const GET_JUDGEMENTS = 'GET_JUDGEMENTS';
 export const FIND_JUDGEMENT_BY_ID = 'FIND_JUDGEMENT_BY_ID';
+
+export const GET_SECTIONS = 'GET_SECTIONS';
+export const FIND_SECTION_BY_ID = 'FIND_SECTION_BY_ID';

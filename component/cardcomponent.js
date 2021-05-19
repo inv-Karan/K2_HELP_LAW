@@ -8,7 +8,9 @@ const CardComponent = (props) => {
     sm={2}
     item className={[classes.card,classes.clickableCard]}
     onClick={() => onPageChange()} >
-      <div style={{backgroundColor: 'white', padding: 10}}>
+      <div style={{backgroundColor: 'white',paddingTop: 10,
+    paddingBottom: 0,borderRadius: '7px',
+    height: '100%'}}>
     <div className={classes.labelStyle} >
       {label}
     </div>
@@ -23,11 +25,6 @@ const CardComponent = (props) => {
 
 const STYLES = {
   card: {
-    position: 'inherit',
-    width: '100%',
-    height: '93px',
-    left: '21px',
-    top: '911px',
     paddingTop: 5,
     margin: 10,
     background: '#227DF2',
@@ -35,34 +32,23 @@ const STYLES = {
     
   },
   labelStyle: {
-    position: 'inherit',
-    width: '78px',
-    height: '21px',
-    left: '37px',
-    top: '1035px',
   
     fontfamily: 'Public Sans',
     fontstyle: 'normal',
     fontweight: 600,
     fontsize: '18px',
     lineheight: '21px',
-
+    padding:'0px 10px',
     color: '#227df2',
 
   },
   subStyle: {
-    position: 'inherit',
-    width: '78px',
-    height: '21px',
-    left: '37px',
-    top: '1035px',
-  
     fontfamily: 'Public Sans',
     fontstyle: 'normal',
     fontweight: 'normal',
     fontsize: '13px',
     lineheight: '15px',
-
+    padding:'0px 10px',
     color: '#787878',
 
   },

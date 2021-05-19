@@ -6,12 +6,14 @@ import {
   import user from './user'
   import laws from './laws'
   import judgements from './judgements'
+  import sections from './sections'
 
   const combinedReducer = combineReducers({
     toastr: toastrReducer,
     user,
     laws,
-    judgements
+    judgements,
+    sections
   });
   
   export default combinedReducer

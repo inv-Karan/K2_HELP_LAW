@@ -4,7 +4,7 @@ import { laws, judgements, bookmarks } from "../../utility/constants"
 import { CardComponent, Button } from '../index'
 
 
-const DashboardCards = (props) => {
+const lawDashboardCards = (props) => {
   const { lawList, judgementList, router } = props
   const cardColors = ['#4E89AE', '#ED6663', '#FFA372']
 
@@ -19,7 +19,7 @@ const DashboardCards = (props) => {
           <Grid container>
           {lawList.map(({ lawTitle, lawDescription, pageLink, bookmark }) => <CardComponent
             sub={lawDescription}
-            onPageChange={() => router.push(pageLink)}
+            onPageChange={() => router.push()}
             label={lawTitle}
             bookMark={bookmark}
           />)}
@@ -64,5 +64,4 @@ const DashboardCards = (props) => {
   </>
 }
 
-
-export default DashboardCards
+export default lawDashboardCards
