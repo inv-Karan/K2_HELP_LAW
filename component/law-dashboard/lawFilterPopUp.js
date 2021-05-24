@@ -2,12 +2,10 @@ import React from 'react'
 import { withStyles } from '@material-ui/core'
 import { Filter } from '../../utility/constants'
 import { useRouter } from 'next/router'
-import { useSelector } from "react-redux";
-import { Checkbox, Radio } from '../component/index'
 
-const FilterPopUp = ({showFarmPopup, toggleFarmPopup}) => {
+const FilterPopUp = (props) => {
   const router = useRouter()
-  let { classes, customClass } = props;
+  let { classes, customClass, toggleFilterPopUp } = props;
   // const userData = useSelector((state) => state.user.userData || null);
   return <nav className={`leftMenu ${customClass}`}>
     <ul>
@@ -19,7 +17,7 @@ const FilterPopUp = ({showFarmPopup, toggleFarmPopup}) => {
           }
         }}
         >
-          <img src={icon} className={'leftIcon'} />
+          {/* <img src={icon} className={'leftIcon'} /> */}
           <p>{text}</p><span />
           {/* <img src={'/images/icons-expand.svg'} className={'expandIcon'} /> */}
         </div>

@@ -5,6 +5,7 @@ import { PrimaryLayout, PageFrame } from '../component/index'
 import { useRouter } from 'next/router'
 import LAWDASHBOARDHEADER from '../component/law-dashboard/lawDashboardHeader'
 import LAWDASHBOARDCARDS from '../component/law-dashboard/lawDashboardCards'
+import LAWFILTERPOPUP from '../component/law-dashboard/lawFilterPopUp'
 import { useSelector } from "react-redux"
 
 
@@ -19,7 +20,8 @@ const lawDashboard = () => {
       <PageFrame>
         <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
-        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router} toggleFilterPopup = {() => toggleFilterPopup(!showFilterPopup)} />
+        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router} />
+        <LAWFILTERPOPUP toggleFilterPopup = {() => toggleFilterPopup(!showFilterPopup)}/>
         </div>
       </PageFrame>
     </PrimaryLayout>

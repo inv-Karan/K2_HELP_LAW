@@ -28,13 +28,18 @@ const Header = (props) => {
     <div className={'rightCol'}>
       <div className="dropdown">
         <span className="dropbtn">
-          <img src="/images/cog-wheel-silhouette.png" style={{height: 20,display: "inline-block",width: 20,backgroundColor: "white"}} />
-          <img src="/images/chevron_down_font_awesome.png" style={{height: 15,width: 15,marginLeft: 5,display: "inline-block",top: -10,backgroundColor: "white"}} />
+          <img src="/images/settings.jpeg" style={{height: 40,display: "inline-block",width: 40,backgroundColor: "white"}} />
+          {/* <img src="/images/chevron_down_font_awesome.png" style={{height: 15,width: 15,marginLeft: 5,display: "inline-block",top: -10,backgroundColor: "white"}} /> */}
         </span>
         <div className="dropdown-content">
-          <span onClick={() => {
+          {/* <span onClick={() => {
             window.open(`mailto:admin@myfarmeasy.com?body=Hi MyFarmEasy Admin, Email: ${email} / Name: ${name}&subject=Important! Admin MyFarmEasy Contact`);
-          }} style={{cursor: "pointer"}} >Contact Us</span>
+          }} style={{cursor: "pointer"}} >Contact Us</span> */}
+          <span style={{cursor: "pointer"}} >Language</span>
+          <span style={{cursor: "pointer"}} >Notification</span>
+          <span style={{cursor: "pointer"}} >Help & Chat</span>
+          <span style={{cursor: "pointer"}} >Feedback</span>
+          <span style={{cursor: "pointer"}} >Rate Us</span>
           <span onClick={() => {
             dispatch(deleteUser())
             .then(() => {

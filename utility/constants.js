@@ -100,7 +100,7 @@ export const Menu = [
     {
         icon: '',
         text: 'Filter',
-        link: '',
+        link: '/lawFilterPopUp',
         subMenu: []
     }
 ]
