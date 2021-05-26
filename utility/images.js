@@ -1,3 +1,4 @@
 export default {
-    bookmark: '/images/bookmark.jpg'
+    bookmarkActive: '/images/bookmarkActive.svg',
+    bookmarkPassive: '/images/bookmarkPassive.svg'
 };

@@ -5,7 +5,6 @@ import { PrimaryLayout, PageFrame } from '../component/index'
 import { useRouter } from 'next/router'
 import LAWDASHBOARDHEADER from '../component/law-dashboard/lawDashboardHeader'
 import LAWDASHBOARDCARDS from '../component/law-dashboard/lawDashboardCards'
-import LAWFILTERPOPUP from '../component/law-dashboard/lawFilterPopUp'
 import { useSelector } from "react-redux"
 
 
@@ -13,7 +12,6 @@ const lawDashboard = () => {
   const router = useRouter()
   const laws = useSelector((state) => state.laws.laws || [])
   const judgements = useSelector((state) => state.judgements.judgements || [])
-  const [showFilterPopup, toggleFilterPopup] = useState(false)
 
   return (
     <PrimaryLayout>
@@ -21,7 +19,6 @@ const lawDashboard = () => {
         <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
         <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router} />
-        <LAWFILTERPOPUP toggleFilterPopup = {() => toggleFilterPopup(!showFilterPopup)}/>
         </div>
       </PageFrame>
     </PrimaryLayout>

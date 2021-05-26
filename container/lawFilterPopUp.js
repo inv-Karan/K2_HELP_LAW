@@ -1,13 +1,13 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core'
-import { Filter } from '../../utility/constants'
+import { Filter } from '../utility/constants'
 import { useRouter } from 'next/router'
 
 const FilterPopUp = (props) => {
   const router = useRouter()
-  let { classes, customClass, toggleFilterPopUp } = props;
-  // const userData = useSelector((state) => state.user.userData || null);
-  return <nav className={`leftMenu ${customClass}`}>
+  let { classes, customClass } = props;
+  return <>
+  <nav className={`leftMenu ${customClass}`}>
     <ul>
       <li className={'title'}>Filter</li>
       {Filter.map(({ text, subFilter, link }, index) => <li key={index}>
@@ -50,6 +50,7 @@ const FilterPopUp = (props) => {
       </li> */}
     </ul>
   </nav >
+  </>
 }
 const STYLES = {
 

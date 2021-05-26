@@ -100,7 +100,7 @@ export const Menu = [
     {
         icon: '',
         text: 'Filter',
-        link: '/lawFilterPopUp',
+        link: '/law-filterpopup',
         subMenu: []
     }
 ]
@@ -111,7 +111,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/ipc',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkActive,
         lawName: 'ipc',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -123,7 +123,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/crpc',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkPassive,
         lawName: 'crpc',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -135,7 +135,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/evidence',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkActive,
         lawName: 'evidence',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -147,7 +147,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/mv',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkPassive,
         lawName: 'mv',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -159,7 +159,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/gp',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkActive,
         lawName: 'gp',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -171,7 +171,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/prohibition',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkPassive,
         lawName: 'prohibition',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -183,7 +183,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/gambling',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkActive,
         lawName: 'gambling',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -195,7 +195,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/pocso',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkPassive,
         lawName: 'pocso',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -207,7 +207,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/scst',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkActive,
         lawName: 'scst',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -219,7 +219,7 @@ export const laws = [
         img: '',
         pageLink: '/law-detail/gap',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark,
+        bookmark: Image.bookmarkPassive,
         lawName: 'gap',
         description:'The Indian Penal Code is the official criminal code of India. It is a comprehensive code intended to cover all substantive.',
         section: 'The Black Money (Undisclosed Foreign Income and Imposition of Tax Act. 2015',
@@ -297,69 +297,69 @@ export const bookmarks = [
         img: '',
         pageLink: '/ipc-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkActive
     },
     {
         label: 'C.R.P.C act',
         img: '',
         pageLink: '/crpc-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkPassive
     },
     {
         label: 'Evidence act',
         img: '',
         pageLink: '/evidence-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkActive
     },
     {
         label: 'M.V. act',
         img: '',
         pageLink: '/mv-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkPassive
     },
     {
         label: 'G.P. act',
         img: '',
         pageLink: '/gp-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkActive
     },
     {
         label: 'Prohibition act',
         img: '',
         pageLink: '/prohibition-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkPassive
     },
     {
         label: 'Gambling act',
         img: '',
         pageLink: '/gambling-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkActive
     },
     {
         label: 'P.O.C.S.O.',
         img: '',
         pageLink: '/pocso',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkPassive
     },
     {
         label: 'S.C.S.T. act',
         img: '',
         pageLink: '/scst-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkActive
     },
     {
         label: 'GAP act',
         img: '',
         pageLink: '/gap-act',
         sub: 'lorem ipsum',
-        bookmark: Image.bookmark
+        bookmark: Image.bookmarkPassive
     },
 ];
