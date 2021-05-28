@@ -1,19 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, ListTabs } from '../component/index'
+import { PageFrame } from '../component/index'
 import { CardComponent } from '../component/index'
-import { laws } from "../utility/constants"
 import { useRouter } from 'next/router'
+import { getLaws } from '../redux/action/lawAction'
+import ReactHtmlParser from 'html-react-parser'
+import { useSelector, useDispatch } from 'react-redux'
 
 const LawList = () => {
-  const [selectedTab, changeSelectedTab] = useState('ca')
+  // const [selectedTab, changeSelectedTab] = useState('ca')
   const router = useRouter()
+  const laws = useSelector((state) => state.laws.laws) || []
+  const preferedlanguage = useSelector((state) => state.user.preferedlanguage) || ""
+  const formattedLaws = laws.map(l => {
+    const lawdata = l[preferedlanguage]
+    return {
+      ...lawdata,
+      _id: l._id
+    }
+  }) 
+  const dispatch = useDispatch()
+   
+  useEffect(() => {
+    debugger
+    dispatch(getLaws())
+  }, []);
 
   return <>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
-        <h1>LAWS</h1>
+        <h1>ACTS</h1>
       </Grid>
       <Grid container>
         <div style={{ position: 'relative', display: 'inline-block' }}>
@@ -25,7 +42,7 @@ const LawList = () => {
         </div>
       </Grid>
       <div className={'LawListPage'}>
-        <div className={'tab'}>
+        {/* <div className={'tab'}>
           <ListTabs
             tabs={
               [
@@ -39,16 +56,16 @@ const LawList = () => {
             changeSelectedTab={changeSelectedTab}
             selectedTab={selectedTab}
           />
-        </div>
+        </div> */}
       </div>
       <Grid container>
-        {laws.map(({ label, sub, pageLink, bookmark }) => <CardComponent
-          sub={sub}
-          onPageChange={() => router.push(pageLink)}
-          label={label}
-          bookMark={bookmark}
-        />)}
-      </Grid>
+          {formattedLaws.map(({ lawTitle, lawSummary, pageLink, bookmark, _id }) => <CardComponent
+            sub={ReactHtmlParser(lawSummary)}
+            onPageChange={() => router.push(`law-detail/${_id}`)}
+            label={lawTitle}
+            // bookMark={bookmark}
+          />)}
+          </Grid>
     </PageFrame>
   </>
 }

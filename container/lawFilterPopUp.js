@@ -1,13 +1,15 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core'
+import { withStyles, Dialog } from '@material-ui/core'
 import { Filter } from '../utility/constants'
 import { useRouter } from 'next/router'
 
 const FilterPopUp = (props) => {
   const router = useRouter()
-  let { classes, customClass } = props;
+  let { classes, customClass, open, toggleFilter } = props;
   return <>
-  <nav className={`leftMenu ${customClass}`}>
+  <Dialog className={'customPopup'} open={open}>
+  <img onClick={() => { toggleFilter()}} src={'/images/close.svg'} className={'closePopup'} />
+  <nav className={`${customClass}`}>
     <ul>
       <li className={'title'}>Filter</li>
       {Filter.map(({ text, subFilter, link }, index) => <li key={index}>
@@ -41,15 +43,9 @@ const FilterPopUp = (props) => {
           )}
         </ul>}
       </li>)}
-      {/* <li>
-        <ul className={'firstChild'}>
-          <li onClick={() => {
-            window.open(`mailto:support@myfarmeasy.com?body=Hi, Please find my query below. Email: ${userData.email} / Name: ${userData.name}&subject=Enquiry from Myfarmeasy`);
-          }}>Contact Us</li>
-        </ul>
-      </li> */}
     </ul>
   </nav >
+  </Dialog>
   </>
 }
 const STYLES = {

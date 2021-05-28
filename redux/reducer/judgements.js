@@ -4,8 +4,8 @@ import {
   } from "../action/type";
   
   const initialState = {
-    judgements: {},
-    judgementById: {}
+    judgements: [],
+    judgementById: []
   };
   
   // Creating my reducer

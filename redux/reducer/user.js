@@ -12,7 +12,8 @@ import {
     details: [],
     user_id: 0,
     otp: '',
-    mobile:''
+    mobile:'',
+    preferedlanguage: 'en'
   };
   
   // Creating my reducer

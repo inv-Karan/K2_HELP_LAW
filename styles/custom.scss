@@ -82,6 +82,18 @@ ul{
     }
   }
 }
+
+.read-more-link{
+  color: blueviolet;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.extra-content{
+  color: cornflowerblue;
+  font-weight: 500;
+}
+
 .mainContainer{
   background-color: #fafcff;
   padding:40px 40px $size20 290px;

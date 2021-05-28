@@ -22,10 +22,10 @@ function logIn() {
     router.push('/law-dashboard'),
     dispatch(getLaws()),
     dispatch(getJudgements()),
-    dispatch(findLawById()),
-    dispatch(findJudgementById()),
+    // dispatch(findLawById(id)),
+    // dispatch(findJudgementById(id)),
     dispatch(getSections()),
-    dispatch(findSectionById())
+    // dispatch(findSectionById(id))
     )
   }
 

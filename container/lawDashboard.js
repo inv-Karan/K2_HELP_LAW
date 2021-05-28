@@ -1,24 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { withStyles } from '@material-ui/core'
 import Color from '../styles/colors'
 import { PrimaryLayout, PageFrame } from '../component/index'
 import { useRouter } from 'next/router'
 import LAWDASHBOARDHEADER from '../component/law-dashboard/lawDashboardHeader'
 import LAWDASHBOARDCARDS from '../component/law-dashboard/lawDashboardCards'
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { getLaws } from '../redux/action/lawAction'
+// import { getJudgements } from '../redux/action/judgementAction'
 
 
 const lawDashboard = () => {
   const router = useRouter()
-  const laws = useSelector((state) => state.laws.laws || [])
-  const judgements = useSelector((state) => state.judgements.judgements || [])
-
+  const dispatch = useDispatch()
+  const laws = useSelector((state) => state.laws.laws) || []
+  const judgements = useSelector((state) => state.judgements.judgements) || []
+  const preferedlanguage = useSelector((state) => state.user.preferedlanguage) || ""
+  const formattedLaws = laws.map(l => {
+    const lawdata = l[preferedlanguage]
+    return {
+      ...lawdata,
+      _id: l._id
+    }
+  })
+  useEffect(() => {
+    dispatch(getLaws())
+    // dispatch(getJudgements())
+  }, [])
   return (
     <PrimaryLayout>
       <PageFrame>
         <div className={'dashboardPage'}>
         <LAWDASHBOARDHEADER />
-        <LAWDASHBOARDCARDS lawList = {laws} judgementList = {judgements} router={router} />
+        <LAWDASHBOARDCARDS lawList = {formattedLaws || []} judgementList = {judgements || []} router={router} />
         </div>
       </PageFrame>
     </PrimaryLayout>

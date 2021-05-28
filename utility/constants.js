@@ -97,12 +97,6 @@ export const Menu = [
         link: '',
         subMenu: []
     },
-    {
-        icon: '',
-        text: 'Filter',
-        link: '/law-filterpopup',
-        subMenu: []
-    }
 ]
 
 export const laws = [

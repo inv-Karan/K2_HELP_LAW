@@ -2,26 +2,27 @@ import React  from 'react'
 import { Grid } from '@material-ui/core'
 import { laws, judgements, bookmarks } from "../../utility/constants"
 import { CardComponent, Button } from '../index'
+import ReactHtmlParser from 'html-react-parser';
 
 
 const lawDashboardCards = (props) => {
   const { lawList, judgementList, router } = props
   const cardColors = ['#4E89AE', '#ED6663', '#FFA372']
-
+  debugger
   return <>
     <Grid>
           <div className={'dashboardLabels'}>
-            <h1>LAWS</h1>
+            <h1>ACTS</h1>
               <Button text={`View All`} onClick={() => {
                 router.push('/law-list')
               }}></Button>
           </div>
           <Grid container>
-          {lawList.map(({ lawTitle, lawDescription, pageLink, bookmark }) => <CardComponent
-            sub={lawDescription}
-            onPageChange={() => router.push()}
+          {lawList.map(({ lawTitle, lawSummary, pageLink, bookmark, _id }) => <CardComponent
+            sub={ReactHtmlParser(lawSummary)}
+            onPageChange={() => router.push(`law-detail/${_id}`)}
             label={lawTitle}
-            bookMark={bookmark}
+            // bookMark={bookmark}
           />)}
           </Grid>
     </Grid>
@@ -39,7 +40,7 @@ const lawDashboardCards = (props) => {
             sub={judgementInShort}
             onPageChange={() => router.push(pageLink)}
             label={judgementTitle}
-            bookMark={bookmark}
+            // bookMark={bookmark}
           />)}
           </Grid>
     </Grid>

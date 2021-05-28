@@ -27,10 +27,13 @@ import {
     })
   };
 
-  export const findLawById = () => (dispatch) => {
+  export const findLawById = (_id) => (dispatch) => {
+    debugger
     return new Promise((resolve, reject) => {
-      sendHttpCall(dispatch, 'post', `${urlMapper.findLawById}${_id}`)
+      debugger
+      sendHttpCall(dispatch, 'post', `${urlMapper.findLawById}`, {_id})
         .then(res => {
+          debugger
           dispatch({
             type: FIND_LAW_BY_ID,
             payload: res.data,

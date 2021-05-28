@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { withStyles } from '@material-ui/core'
-import { Menu, HelpMenu, Permission } from '../utility/constants'
+import { Menu } from '../utility/constants'
 import { useRouter } from 'next/router'
-import { useSelector } from "react-redux";
+import LawFilterPopup from '../container/lawFilterPopUp'
 
 const SideMenu = (props) => {
   const router = useRouter()
   let { classes, customClass } = props;
+  let [showFilter, setToggleFilter] = useState(false)
   // const userData = useSelector((state) => state.user.userData || null);
-  return <nav className={`navigation ${customClass}`}>
+  return <><nav className={`navigation ${customClass}`}>
     <ul>
       <li className={'title'}>Help</li>
       {Menu.map(({ text, icon, link }, index) => <li key={index}>
@@ -30,8 +31,16 @@ const SideMenu = (props) => {
           }}>Contact Us</li>
         </ul>
       </li> */}
+      <li>
+        <div className={'firstLevel'} onClick={() => {setToggleFilter(!showFilter)}}>
+          <img src={''} className={'leftIcon'} />
+          <p>{'Filter'}</p><span />
+        </div>
+      </li>
     </ul>
   </nav >
+  <LawFilterPopup open={showFilter} toggleFilter={() => setToggleFilter(!showFilter)}/>
+  </>
 }
 const STYLES = {
 

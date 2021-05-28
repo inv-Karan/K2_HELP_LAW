@@ -3,6 +3,7 @@ import { withStyles, Grid } from '@material-ui/core'
 import { BorderColor } from '@material-ui/icons'
 
 const CardComponent = (props) => {
+  
   let { classes, onPageChange, label, imgSrc, sub, bookmark } = props
   return <Grid
     sm={2}

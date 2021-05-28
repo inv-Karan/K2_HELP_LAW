@@ -6,7 +6,7 @@ import { TextBox, Select, Button, Container, Logo } from '../component/index';
 import { updateUser } from "../redux/action/userAction"
 import { getLaws } from "../redux/action/lawAction"
 import { useDispatch } from 'react-redux'
-import { getJudgements } from '../redux/action/judgementAction';
+// import { getJudgements } from '../redux/action/judgementAction';
 
 const updateProfileSchema = Yup.object({
 })
@@ -20,7 +20,7 @@ function updateProfile() {
     .then(res =>
     router.push('/law-dashboard'),
     dispatch(getLaws()),
-    dispatch(getJudgements())
+    // dispatch(getJudgements())
     )
   }
 

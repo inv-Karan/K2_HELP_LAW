@@ -1,41 +1,51 @@
-import React, { useState } from 'react'
-import { withStyles, Grid, TextField } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
+import { withStyles, Grid } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
 import { PageFrame, DetailsTabs, Collapsable } from '../component/index'
-import { Card, CardComponent } from '../component/index'
-// import Blog from './blog'
+import { Card } from '../component/index'
+import { useSelector, useDispatch } from 'react-redux'
+import { findLawById } from '../redux/action/lawAction'
+import ReactHtmlParser from 'html-react-parser';
 import { useRouter } from 'next/router'
 
 const LawDetails = (props) => {
-  const [selectedTab, changeSelectedTab] = useState('hindi')
+  const preferedlanguage = useSelector((state) => state.user.preferedlanguage) || ""
   const router = useRouter()
-  const { classes, law } = props
-  const { label, description, section, summary, inShort, bookmark } = law || {}
+  const [selectedTab, changeSelectedTab] = useState(preferedlanguage)
+  const dispatch = useDispatch()
+  const { classes, id } = props
+  const selectedLawDetails = useSelector((state) => state.laws.selectedLawDetails) || {}
+  debugger
+  useEffect(() => {
+    debugger
+    dispatch(findLawById(id))
+  }, [router]);
+
   return <>
     <PageFrame>
       <Grid item>
-        <h1 className={classes.labelStyle}>Laws Details</h1>
+        <h1 className={classes.labelStyle}>Act Details</h1>
       </Grid>
           <DetailsTabs
             tabs={
               [
-                { label: 'Hindi', value: 'hindi' },
-                { label: 'English', value: 'english' },
-                { label: 'Gujarati', value: 'gujarati' },
-                { label: 'Marathi', value: 'marathi' },
+                { label: 'Hindi', value: 'hi' },
+                { label: 'English', value: 'en' },
+                { label: 'Gujarati', value: 'gj' },
+                { label: 'Marathi', value: 'mh' },
               ]
             }
             changeSelectedTab={changeSelectedTab}
             selectedTab={selectedTab}
           />
-      <Card>
+      {selectedLawDetails[selectedTab] && <Card>
         <div className={classes.borderCardChildren}>
-          <p className={classes.labelStyle}>{label}</p>
-          <p className={classes.subStyle}>{description}</p>
-          <img src={bookmark}/>
+          <p className={classes.labelStyle}>{selectedLawDetails[selectedTab].lawTitle}</p>
+          <p className={classes.subStyle}>{ReactHtmlParser(selectedLawDetails[selectedTab].lawSummary)}</p>
+          {/* <img src={bookmark}/> */}
         </div>
-      </Card>
-      <Card>
+      </Card>}
+      {/* <Card>
         <div className={classes.borderCardChildren}>
           <p className={classes.labelStyle}>{'Section'}</p>
           <p className={classes.subStyle}>{section}</p>
@@ -48,7 +58,7 @@ const LawDetails = (props) => {
           <p className={classes.labelStyle}>{'In Short'}</p>
           <p className={classes.subStyle}>{inShort}</p>
         </div>
-      </Card>
+      </Card> */}
       <Grid>
         <Collapsable />
       </Grid>
