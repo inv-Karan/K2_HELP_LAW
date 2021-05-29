@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, DetailsTabs } from '../component/index'
+import { PageFrame, DetailsTabs, PrimaryLayout } from '../component/index'
 import { CardComponent } from '../component/index'
 // import Blog from './blog'
 import { useRouter } from 'next/router'
@@ -11,6 +11,7 @@ const JudgementDetails = () => {
   const router = useRouter()
 
   return <>
+  <PrimaryLayout>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>Judgement Details</h1>
@@ -64,6 +65,7 @@ const JudgementDetails = () => {
         />
       </Grid>
     </PageFrame>
+    </PrimaryLayout>
   </>
 }
 

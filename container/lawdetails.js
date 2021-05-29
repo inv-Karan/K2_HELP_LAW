@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withStyles, Grid } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, DetailsTabs, Collapsable } from '../component/index'
+import { PageFrame, DetailsTabs, Collapsable, PrimaryLayout } from '../component/index'
 import { Card } from '../component/index'
 import { useSelector, useDispatch } from 'react-redux'
 import { findLawById } from '../redux/action/lawAction'
@@ -22,6 +22,7 @@ const LawDetails = (props) => {
   }, [router]);
 
   return <>
+  <PrimaryLayout>
     <PageFrame>
       <Grid item>
         <h1 className={classes.labelStyle}>Act Details</h1>
@@ -63,6 +64,7 @@ const LawDetails = (props) => {
         <Collapsable />
       </Grid>
     </PageFrame>
+    </PrimaryLayout>
   </>
 }
 

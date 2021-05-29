@@ -97,6 +97,18 @@ export const Menu = [
         link: '',
         subMenu: []
     },
+    {
+        icon: '',
+        text: 'Acts',
+        link: '/law-list',
+        subMenu: []
+    },
+    {
+        icon: '',
+        text: 'Judgements',
+        link: '/judgement-list',
+        subMenu: []
+    },
 ]
 
 export const laws = [

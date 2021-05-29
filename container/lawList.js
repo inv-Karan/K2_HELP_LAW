@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame } from '../component/index'
+import { PageFrame, PrimaryLayout } from '../component/index'
 import { CardComponent } from '../component/index'
 import { useRouter } from 'next/router'
 import { getLaws } from '../redux/action/lawAction'
@@ -28,6 +28,7 @@ const LawList = () => {
   }, []);
 
   return <>
+  <PrimaryLayout>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>ACTS</h1>
@@ -67,6 +68,7 @@ const LawList = () => {
           />)}
           </Grid>
     </PageFrame>
+    </PrimaryLayout>
   </>
 }
 

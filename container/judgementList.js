@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
 import { SearchIcon } from '@material-ui/icons/Search'
-import { PageFrame, ListTabs, Collapsable, CardComponent } from '../component/index'
+import { PageFrame, ListTabs, Collapsable, CardComponent, PrimaryLayout } from '../component/index'
 import { judgements } from "../utility/constants"
 // import Blog from './blog'
 
@@ -9,6 +9,7 @@ const JudgementList = () => {
   const [selectedTab, changeSelectedTab] = useState('sections')
 
   return <>
+  <PrimaryLayout>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>JUDGEMENTS</h1>
@@ -49,6 +50,7 @@ const JudgementList = () => {
           />)}
       </Grid>
     </PageFrame>
+    </PrimaryLayout>
   </>
 }
 

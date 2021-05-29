@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { withStyles, Grid, TextField } from '@material-ui/core'
-import { PageFrame, CommonTabs } from '../component/index'
+import { PageFrame, CommonTabs, PrimaryLayout } from '../component/index'
 import { SearchIcon } from '@material-ui/icons/Search'
 import { CardComponent } from '../component/index'
 import { bookmarks } from "../utility/constants"
@@ -10,6 +10,7 @@ const BookmarkList = () => {
   // const [selectedTab, changeSelectedTab] = useState('ca')
 
   return <>
+  <PrimaryLayout>
     <PageFrame>
       <Grid item className={'createSelect formSquare'}>
         <h1>YOUR BOOKMARK</h1>
@@ -49,6 +50,7 @@ const BookmarkList = () => {
           />)}
       </Grid>
     </PageFrame>
+    </PrimaryLayout>
   </>
 }
 
